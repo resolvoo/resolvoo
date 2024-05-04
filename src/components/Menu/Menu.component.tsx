@@ -90,7 +90,7 @@ export function Menu() {
                         <Link
                             className="rounded-full bg-green-500 px-4 py-3 text-center text-[.9375rem] font-semibold text-green-50"
                             onClick={handleSetToggle}
-                            href={`${process.env.NEXT_REDIRECT_FORM_URL!}`}
+                            href={`https://app.resolvoo.com.br/solucoes/sobre-o-problema`}
                         >
                             Avaliar meu caso
                         </Link>
