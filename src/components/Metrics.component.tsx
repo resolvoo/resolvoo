@@ -10,7 +10,7 @@ export function Metrics() {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setToggle(true)
-        }, 5000)
+        }, 2000)
 
         return () => clearInterval(intervalId)
     }, [])
