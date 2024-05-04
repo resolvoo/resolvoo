@@ -40,7 +40,7 @@ export function Header() {
                 <Button
                     size="sm"
                     fill="ghost"
-                    href={`/${process.env.NEXT_REDIRECT_FORM_URL}`}
+                    href={`${process.env.NEXT_REDIRECT_FORM_URL}`}
                     className="hidden md:block"
                 >
                     Avaliar meu caso
