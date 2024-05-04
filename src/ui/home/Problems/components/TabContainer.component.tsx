@@ -65,7 +65,7 @@ export function TabContainer() {
                             <hr className="w-full border-gray-200" />
 
                             <Button
-                                href={`${process.env.NEXT_REDIRECT_FORM_URL}`}
+                                href={`/${process.env.NEXT_REDIRECT_FORM_URL}`}
                                 size="md"
                                 fill="green"
                             >
@@ -114,7 +114,7 @@ export function TabContainer() {
                             <hr className="w-full border-gray-200" />
 
                             <Button
-                                href={`${process.env.NEXT_REDIRECT_FORM_URL}`}
+                                href={`/${process.env.NEXT_REDIRECT_FORM_URL}`}
                                 size="md"
                                 fill="green"
                             >
