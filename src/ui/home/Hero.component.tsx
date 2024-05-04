@@ -32,7 +32,7 @@ export function Hero() {
                         >
                             Avaliar meu caso
                         </Button>
-                        <Button href={'/'} size="md" fill="ghost">
+                        <Button href={'/#steps'} size="md" fill="ghost">
                             Como funciona
                         </Button>
                     </div>
