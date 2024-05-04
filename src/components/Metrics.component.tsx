@@ -8,7 +8,11 @@ export function Metrics() {
     const [toggle, setToggle] = useState<boolean>(false)
 
     useEffect(() => {
-        setToggle(true)
+        const intervalId = setInterval(() => {
+            setToggle(true)
+        }, 5000)
+
+        return () => clearInterval(intervalId)
     }, [])
 
     return (
@@ -24,9 +28,9 @@ export function Metrics() {
                         }}
                     />
 
-                    <GoogleAnalytics gaId="GTM-NLSM3WR" />
+                    {/* <GoogleAnalytics gaId="GTM-NLSM3WR" /> */}
 
-                    {/* <Script
+                    <Script
                         id="gtm"
                         type="text/javascript"
                         async
@@ -52,7 +56,7 @@ export function Metrics() {
                             width="0"
                             style={{ display: 'none', visibility: 'hidden' }}
                         ></iframe>
-                    </noscript> */}
+                    </noscript>
                 </>
             )}
         </>
