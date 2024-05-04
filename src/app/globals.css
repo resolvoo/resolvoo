@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply antialiased h-full scroll-smooth selection:bg-purple-700 selection:text-purple-50
+}
+
+body {
+  @apply h-full
+}
+
+p{
+  @apply font-medium leading-snug tracking-[-0.013em]
+}
