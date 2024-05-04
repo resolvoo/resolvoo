@@ -114,7 +114,7 @@ export function TabContainer() {
                             <hr className="w-full border-gray-200" />
 
                             <Button
-                                href={`${process.env.NEXT_REDIRECT_FORM_URL}`}
+                                href={`https://app.resolvoo.com.br/solucoes/sobre-o-problema`}
                                 size="md"
                                 fill="green"
                             >
