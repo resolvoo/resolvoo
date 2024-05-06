@@ -40,7 +40,7 @@ export function Header() {
                 <Button
                     size="sm"
                     fill="ghost"
-                    href={`${process.env.NEXT_REDIRECT_FORM_URL}`}
+                    href={`https://app.resolvoo.com.br/solucoes/sobre-o-problema`}
                     className="hidden md:block"
                 >
                     Avaliar meu caso
