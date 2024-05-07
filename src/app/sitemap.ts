@@ -1,6 +1,17 @@
-import { MetadataRoute } from 'next'
+import { DataArray } from '@/@types/hygraph/post'
+import { getAllPosts } from '@/services/hygraph/getAllPosts.query'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap() {
+    const { data } = await getAllPosts()
+    const { posts }: DataArray = data
+
+    const post = posts.map((item) => ({
+        url: `https://resolvoo.com.br/blog/${item.url}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 1,
+    }))
+
     return [
         {
             url: 'https://resolvoo.com.br/',
@@ -38,5 +49,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'weekly',
             priority: 0.5,
         },
+        ...post,
     ]
 }
