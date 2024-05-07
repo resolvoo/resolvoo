@@ -22,7 +22,8 @@ type Props = {
     params: { slug: string }
 }
 
-export const revalidate = 60 * 60 * 24 * 30 // one month
+//export const revalidate = 60 * 60 * 24 * 30 // one month
+export const revalidate = 5
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { data } = await getSinglePost({ slug: params.slug })
