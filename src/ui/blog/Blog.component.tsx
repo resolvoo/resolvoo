@@ -8,14 +8,14 @@ import { Container } from '@/components/Container.component'
 import { Footer } from '@/components/Footer.component'
 import { Header } from '@/components/Header.component'
 import { Label } from '@/components/Label.component'
-import { getPosts } from '@/services/hygraph/getPosts.query'
+import { getAllPosts } from '@/services/hygraph/getAllPosts.query'
 import { Cta } from '@/ui/home/Cta.component'
 import { Faq } from '@/ui/home/Faq/Faq.component'
 
 import { Feature } from './components/Feature.component'
 
 export async function Blog() {
-    const { data } = await getPosts({ size: 12 })
+    const { data } = await getAllPosts()
     const { posts }: DataArray = data
 
     return (
