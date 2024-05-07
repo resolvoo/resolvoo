@@ -50,7 +50,7 @@ export default async function Page({ params }: Props) {
     const { post }: Data = data
 
     if (!post) {
-        return redirect('/not-found')
+        return redirect('/404')
     }
 
     return (
