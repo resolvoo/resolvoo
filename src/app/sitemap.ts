@@ -49,6 +49,30 @@ export default async function sitemap() {
             changeFrequency: 'weekly',
             priority: 0.5,
         },
+        {
+            url: 'https://resolvoo.com.br/campaigns/voo-atrasado-conheca-seus-direitos-e-saiba-como-reivindica-los/',
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.5,
+        },
+        {
+            url: 'https://resolvoo.com.br/campaigns/overbooking/',
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.5,
+        },
+        {
+            url: 'https://resolvoo.com.br/campaigns/o-que-fazer-em-caso-de-bagagem-extraviada',
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.5,
+        },
+        {
+            url: 'https://resolvoo.com.br/campaigns/voo-cancelado-o-que-fazer-e-quais-os-seus-direitos/',
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.5,
+        },
         ...post,
     ]
 }
