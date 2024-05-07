@@ -125,13 +125,18 @@ export default async function Page({ params }: Props) {
                                             </Link>
                                         )
                                     },
+
                                     h2: ({ children }) => {
                                         return (
-                                            <h2 className="block w-full pb-6 text-[1.3125rem] font-bold text-purple-950">
+                                            <h2
+                                                id={children as string}
+                                                className="block w-full pb-6 text-[1.3125rem] font-bold text-purple-950"
+                                            >
                                                 {children}
                                             </h2>
                                         )
                                     },
+
                                     h3: ({ children }) => {
                                         return (
                                             <h3 className="block w-full text-[1.1875rem] font-bold text-purple-950">

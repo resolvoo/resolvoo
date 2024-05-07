@@ -40,7 +40,7 @@ export async function Blog() {
                             <div className="flex flex-col items-start gap-3">
                                 <Label className="transition group-hover:bg-purple-700 group-hover:text-purple-50">
                                     {format(
-                                        post.createdAt,
+                                        post?.createdAt,
                                         "dd 'de' MMMM 'de' yyyy",
                                         {
                                             locale: ptBR,

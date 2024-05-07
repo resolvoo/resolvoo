@@ -31,10 +31,10 @@ export async function Feature() {
                                 </Label>
                                 <div className="flex flex-col gap-2 md:max-w-[84%]">
                                     <h1 className="text-[1.5625rem] font-bold leading-none text-purple-950 md:text-[2.75rem]">
-                                        {post.titulo}
+                                        {post?.titulo}
                                     </h1>
                                     <p className="text-[.9375rem] text-gray-500 md:text-[1.0625rem]">
-                                        {post.descricao}
+                                        {post?.descricao}
                                     </p>
                                 </div>
                             </div>
@@ -49,8 +49,8 @@ export async function Feature() {
                         <Image
                             className="rounded-xl object-cover object-left-top md:h-[28rem]"
                             src={post?.capaDoPost?.url}
-                            height={post.capaDoPost.height}
-                            width={post.capaDoPost.width}
+                            height={post?.capaDoPost.height}
+                            width={post?.capaDoPost.width}
                             alt="Imagem do post."
                         />
                     </div>
