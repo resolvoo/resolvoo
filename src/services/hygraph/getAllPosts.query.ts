@@ -5,8 +5,8 @@ import { apolloClient } from '@/lib/apollo/apollo.client'
 export async function getAllPosts() {
     const { data, loading, error } = await apolloClient.query({
         query: gql`
-            query getAllPosts(orderBy: publishedAt_DESC) {
-                posts(first: 100) {
+            query getAllPosts {
+                posts(first: 100, orderBy: publishedAt_DESC) {
                     url
                     titulo
                     descricao
