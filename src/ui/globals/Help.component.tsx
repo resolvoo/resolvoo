@@ -8,10 +8,10 @@ export function Help() {
                 <div className="flex flex-col gap-12 rounded-3xl bg-purple-50 px-6 py-8 md:gap-20 md:p-12">
                     <div className="flex flex-col items-start gap-6">
                         <h2 className="text-[1.5625rem] font-bold leading-none text-purple-950 md:max-w-[44%] md:text-[2.5rem]">
-                            Por que querer a ajuda da Resolvoo?
+                            Por que contar com a Resolvoo?
                             <span className="text-purple-700">
                                 {' '}
-                                Defendemos seus direitos!
+                                Buscamos seus direitos!
                             </span>
                         </h2>
                         <Button
@@ -19,7 +19,7 @@ export function Help() {
                             fill="purple"
                             size="md"
                         >
-                            Avaliar meu caso
+                            Solicitar avaliação
                         </Button>
                     </div>
 
@@ -29,8 +29,8 @@ export function Help() {
                                 + 2mil
                             </h3>
                             <p className="text-[.9375rem] font-semibold leading-tight text-gray-500 md:text-base">
-                                Já ajudamos um bocado de passageiros a receber
-                                suas indenizações, ein!?
+                                Já ajudamos um monte de passageiros a receberem
+                                suas indenizações, viu?!
                             </p>
                         </div>
                         <div className="flex flex-col gap-1">
@@ -38,17 +38,17 @@ export function Help() {
                                 +3 anos
                             </h3>
                             <p className="text-[.9375rem] font-semibold leading-tight text-gray-500 md:text-base">
-                                Nossa equipe possui experiência em uma variedade
-                                de casos e o próximo é o seu, okay? 😊
+                                Nossa equipe tem muita experiência, em muitas
+                                situações diferentes, e a próxima é a sua, okay?
+                                😊
                             </p>
                         </div>
                         <div className="flex flex-col gap-1">
                             <h3 className="text-[1.3125rem] font-bold leading-none text-purple-700 md:text-[1.8125rem]">
-                                +10 companhias
+                                +10 cias
                             </h3>
                             <p className="text-[.9375rem] font-semibold leading-tight text-gray-500 md:text-base">
-                                Temos experência em mais de 10 companhias
-                                aéreas.
+                                Trabalhamos com mais de 10 companhias aéreas.
                             </p>
                         </div>
                         <div className="flex flex-col gap-1">
@@ -56,8 +56,8 @@ export function Help() {
                                 +5 atendentes
                             </h3>
                             <p className="text-[.9375rem] font-semibold leading-tight text-gray-500 md:text-base">
-                                Suporte especializadoe personalizado para o seu
-                                caso
+                                Atendimento especializado e personalizado para o
+                                seu perrengue.
                             </p>
                         </div>
                     </div>

@@ -22,12 +22,13 @@ export function Reasons() {
                                 Como se prevenir do overbooking
                             </h2>
                             <p className="text-[1.0625rem] text-gray-600 md:max-w-[78%]">
-                                Se você pretende não passar por essa turbulência
-                                em sua vida,{' '}
+                                Ninguém quer passar por esse perrengue, então
+                                aqui vão algumas dicas pra você tentar garantir
+                                o seu embarque em caso de overbooking.
+                                <br />{' '}
                                 <span className="text-purple-700">
-                                    há algumas dicas úteis para lidar{' '}
+                                    Dá uma olhada:
                                 </span>
-                                com um Overbooking. Confere aqui:
                             </p>
                         </div>
                     </div>
@@ -44,8 +45,8 @@ export function Reasons() {
                                 Faça o check-in com antecedência.
                             </h3>
                             <p className="text-gray-600">
-                                Condições climáticas adversas ou eventos
-                                naturais imprevisíveis.
+                                Isso ajuda a garantir seu lugar, mesmo que
+                                aconteçam imprevistos.
                             </p>
                         </div>
                     </div>
@@ -61,8 +62,8 @@ export function Reasons() {
                                 Seja cliente fidelizado da empresa.
                             </h3>
                             <p className="text-gray-600">
-                                Isto lhe permite prioridades e vantagens nas
-                                viagens.
+                                Clientes fidelizados têm prioridades e vantagens
+                                nas viagens.
                             </p>
                         </div>
                     </div>
@@ -78,7 +79,7 @@ export function Reasons() {
                                 Marque seu assento na compra.
                             </h3>
                             <p className="text-gray-600">
-                                Escolha seu lugar preferido no avião no momento
+                                Escolha seu lugar favorito no avião no momento
                                 da compra do bilhete.
                             </p>
                         </div>
@@ -95,8 +96,8 @@ export function Reasons() {
                                 Evite os assentos prioritários.
                             </h3>
                             <p className="text-gray-600">
-                                Respeite os assentos prioritários escolhendo
-                                lugares mais atrás.
+                                Respeite os lugares reservados e escolha
+                                assentos mais ao fundo.
                             </p>
                         </div>
                     </div>
@@ -112,8 +113,8 @@ export function Reasons() {
                                 Despache sua bagagem com antecedência.
                             </h3>
                             <p className="text-gray-600">
-                                Mais comodidade e menos tempo de espera no
-                                aeroporto!
+                                Quanto antes você despachar sua bagagem, maior a
+                                chance de você garantir seu lugar no voo.
                             </p>
                         </div>
                     </div>
@@ -129,8 +130,9 @@ export function Reasons() {
                                 Verifique sua reserva antes de voar
                             </h3>
                             <p className="text-gray-600">
-                                Neste caso, a empresa é obrigada a informar com
-                                72 horas de antecedência.
+                                A cia aérea tem o dever de informar qualquer
+                                alteração no seu voo com 72 horas de
+                                antecedência.
                             </p>
                         </div>
                     </div>

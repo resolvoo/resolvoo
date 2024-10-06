@@ -20,16 +20,16 @@ export function Hero() {
                     </div>
                     <div className="flex flex-col items-start gap-8 md:col-span-full md:col-start-8">
                         <p className=" text-[1.0625rem] text-gray-600 md:max-w-[78%]">
-                            Atraso de voo superior a 4 horas já lhe dá direito a
-                            ser indenizado de R$3.000,00 a 5.000,00! Vem saber
-                            como reivindicar sua compensação.
+                            Atrasos acima de 4 horas podem garantir indenizações
+                            de até 10 mil reais! Fale com a gente para saber
+                            como solicitar sua compensação.
                         </p>
                         <Button
                             fill="purple"
                             size="md"
                             href={`${process.env.NEXT_REDIRECT_FORM_URL}`}
                         >
-                            Avaliar meu caso
+                            Solicitar avaliação
                         </Button>
                     </div>
                 </div>
@@ -45,7 +45,8 @@ export function Hero() {
                         alt="Imagem da hero."
                     />
                     <Floater>
-                        🟣 Um dos principais problemas é o atraso de voo.
+                        Voo atrasado é um dos problemas mais comuns na hora de
+                        viajar.
                     </Floater>
                 </div>
             </Container>

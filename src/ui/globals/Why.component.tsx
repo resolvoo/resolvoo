@@ -9,17 +9,17 @@ const withoutResolvoo = [
     {
         title: 'Estressante',
         paragraph:
-            'Você tem que realizar todo o processo sozinho, incluindo negociações com a companhia aérea.',
+            'Você tem que cuidar de tudo sozinho, incluindo as negociações com a companhia aérea.',
     },
     {
         title: 'Muita burocracia',
         paragraph:
-            'Saber quais são os formulários necessários e para onde enviá-los pode ser complicado.',
+            'Você precisa saber quais são os formulários necessários e para onde enviá-los, e isso pode ser complicado.',
     },
     {
-        title: 'Lento',
+        title: 'Demorado',
         paragraph:
-            'Você tem que realizar todo o processo sozinho, incluindo negociações com a companhia aérea.',
+            'O tempo de espera das cias aéreas podem ser demorados, principalmente quando não sabemos direito a quem recorrer.',
     },
     {
         title: 'Arriscado',
@@ -27,9 +27,9 @@ const withoutResolvoo = [
             'Muitas vezes você se esforça tanto para ir atrás da sua compensação e ela é recusada.',
     },
     {
-        title: 'Companhias aéreas que não respondem',
+        title: 'Falta de comunicação',
         paragraph:
-            'Apenas você e a Resolvoo querem que você tenha uma boa viagem :)',
+            'As cias aéreas podem ficar sem te responder por longos períodos.',
     },
 ]
 
@@ -37,26 +37,26 @@ const withResolvoo = [
     {
         title: 'Paz inexplicável',
         paragraph:
-            'Você só precisa se aplicar, nós assumimos a parte estressante.',
+            'Você só precisa enviar sua solicitação, nós cuidamos do resto.',
     },
     {
         title: 'Zero burocracia',
         paragraph:
-            'A burocracia é nossa e deixaremos você ciente de tudo que fazemos para garantir seus direitos.',
+            'Nós cuidamos da papelada e manteremos você atualizado sobre tudo.',
     },
     {
-        title: 'Nosso processo é rápido',
-        paragraph: 'Analisamos e aprovamos seu processo de forma bem ágil.',
-    },
-    {
-        title: 'Segurança',
+        title: 'Procedimento ágil',
         paragraph:
-            'Estamos aqui para garantir seus direitos de forma legal, não damos tiro no escuro!',
+            'Avaliamos e aprovamos sua solicitação com a maior agilidade.',
+    },
+    {
+        title: 'Agimos com segurança',
+        paragraph:
+            'Estamos aqui para garantir seus direitos de forma legal e sem arriscar à toa.',
     },
     {
         title: 'Se comunique apenas com a gente!',
-        paragraph:
-            'A Resolvoo faz tudo que é necessário para você ter uma boa viagem!',
+        paragraph: 'A Resolvoo faz tudo para que você tenha uma boa viagem :)',
     },
 ]
 
@@ -75,7 +75,7 @@ export function Why() {
                         <div className="flex max-w-[32rem] flex-col gap-8 rounded-3xl p-6 py-8 md:gap-8 md:p-10">
                             <div className="flex flex-col items-start gap-5">
                                 <h3 className="text-[1.3125rem] font-bold text-purple-950 md:text-[1.5625rem]">
-                                    Sem a Resolvoo 🫣
+                                    Sem a Resolvoo 💔
                                 </h3>
                                 <hr className="w-full border-gray-200" />
                             </div>

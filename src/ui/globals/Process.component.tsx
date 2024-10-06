@@ -11,13 +11,11 @@ export function Process() {
                     <div className="flex flex-col gap-8">
                         <div className="flex flex-col gap-3">
                             <h2 className="text-[1.5625rem] font-bold leading-none text-purple-950 md:text-[2.5rem]">
-                                Confira o seu processo para se tornar um
-                                Resolvido 🥰
+                                Descubra como se tornar um Resolvido 🥰
                             </h2>
                             <p className="text-[1.0625rem] text-gray-600 md:max-w-[78%]">
-                                Conte conosco para simplificar o processo e
-                                proporcionar a você uma jornada mais tranquila.
-                                🤩
+                                Estamos aqui para facilitar sua jornada e
+                                garantir viagens mais tranquilas para você.🤩
                             </p>
                         </div>
                     </div>
@@ -26,7 +24,7 @@ export function Process() {
                         fill="purple"
                         href={`${process.env.NEXT_REDIRECT_FORM_URL}`}
                     >
-                        Avaliar meu caso
+                        Solicitar avaliação
                     </Button>
                 </div>
                 <div className="grid gap-10 md:col-span-full md:col-start-7 md:gap-9">
@@ -49,14 +47,13 @@ export function Process() {
                             />
                         </svg>
 
-                        <div className="flex flex-col gap-2 border-b border-gray-200 pb-4 md:gap-3">
+                        <div className="flex w-full flex-col gap-2 border-b border-gray-200 pb-4 md:gap-3">
                             <h3 className="text-[1.1875rem] font-bold leading-none text-purple-950 md:text-[1.3125rem]">
                                 Passo #1
                             </h3>
-                            <p className="text-[.9375rem] text-gray-600 md:max-w-[88%] md:text-[1.0625rem]">
-                                Conte conosco para simplificar o processo e
-                                proporcionar a você uma jornada mais tranquila.
-                                🤩
+                            <p className="text-[.9375rem] text-gray-600 md:max-w-[80-%] md:text-[1.0625rem]">
+                                Conte com a gente para simplificar sua
+                                experiência. 🤩
                             </p>
                         </div>
                     </div>
@@ -79,13 +76,13 @@ export function Process() {
                             />
                         </svg>
 
-                        <div className="flex flex-col gap-2 border-b border-gray-200 pb-4 md:gap-3">
+                        <div className="flex w-full flex-col gap-2 border-b border-gray-200 pb-4 md:gap-3">
                             <h3 className="text-[1.1875rem] font-bold leading-none text-purple-950 md:text-[1.3125rem]">
                                 Passo #2
                             </h3>
                             <p className="text-[.9375rem] text-gray-600 md:max-w-[88%] md:text-[1.0625rem]">
-                                Nossa equipe revisará sua reivindicação e
-                                avaliará sua elegibilidade para compensação.
+                                Vamos revisar sua reivindicação e verificar sua
+                                elegibilidade.
                             </p>
                         </div>
                     </div>
@@ -108,13 +105,13 @@ export function Process() {
                             />
                         </svg>
 
-                        <div className="flex flex-col gap-2 border-b border-gray-200 pb-4 md:gap-3">
+                        <div className="flex w-full flex-col gap-2 border-b border-gray-200 pb-4 md:gap-3">
                             <h3 className="text-[1.1875rem] font-bold leading-none text-purple-950 md:text-[1.3125rem]">
                                 Passo #3
                             </h3>
                             <p className="text-[.9375rem] text-gray-600 md:max-w-[88%] md:text-[1.0625rem]">
-                                Após aprovada, cuidaremos de toda a documentação
-                                necessária e das negociações.
+                                Com a aprovação, cuidamos de toda a documentação
+                                e negociações.
                             </p>
                         </div>
                     </div>
@@ -136,13 +133,13 @@ export function Process() {
                                 fill="#7E34BA"
                             />
                         </svg>
-                        <div className="flex flex-col gap-2 border-b border-gray-200 pb-4 md:gap-3">
+                        <div className="flex w-full flex-col gap-2 border-b border-gray-200 pb-4 md:gap-3">
                             <h3 className="text-[1.1875rem] font-bold leading-none text-purple-950 md:text-[1.3125rem]">
                                 Passo #4
                             </h3>
                             <p className="text-[.9375rem] text-gray-600 md:max-w-[88%] md:text-[1.0625rem]">
-                                Uma vez que garantirmos sua compensação, você
-                                receberá o valor acordado. 💸
+                                Após garantir sua indenização, o valor será
+                                depositado para você. 💸
                             </p>
                         </div>
                     </div>

@@ -14,12 +14,12 @@ export function Practices() {
                     <Label>Eficiência 💜</Label>
                     <div className="flex flex-col items-center justify-between gap-3">
                         <h2 className="text-[1.5625rem] font-bold leading-none text-purple-950 md:max-w-[68%] md:text-[2.5rem]">
-                            Boas práticas para garantir sua compensação
+                            As melhores práticas para garantir sua compensação
                         </h2>
                         <p className="text-[1.0625rem] font-medium text-gray-500 md:max-w-[52%]">
-                            Isso não apenas facilita o processo de
-                            reivindicação, mas também aumenta as suas chances de
-                            ser compensado.
+                            Tudo para facilitar não apenas o procedimento de
+                            indenização, mas também para aumentar suas chances
+                            de sucesso.
                         </p>
                     </div>
                 </div>
@@ -37,11 +37,11 @@ export function Practices() {
                         />
                         <div className="flex flex-col items-start gap-3">
                             <h3 className="text-[1.1875rem] font-bold leading-none text-purple-950 md:text-[1.3125rem]">
-                                Guardar as notificações
+                                Salve as notificações
                             </h3>
                             <p className="text-gray-500">
-                                Mantenha emails ou documentos oficiais que
-                                confirmem o seu imprevisto.
+                                Guarde e-mails e documentos que confirmem o
+                                cancelamento do seu voo.
                             </p>
                         </div>
                     </div>
@@ -57,11 +57,11 @@ export function Practices() {
                         />
                         <div className="flex flex-col items-start gap-3">
                             <h3 className="text-[1.1875rem] font-bold leading-none text-purple-950 md:text-[1.3125rem]">
-                                Capturar telas ou imprimir
+                                Capturar telas
                             </h3>
                             <p className="text-gray-500">
-                                Salve provas digitais ou físicas de todas as
-                                etapas e comunicações importantes.
+                                Salve prints de tela ou imprima todas as
+                                comunicações importantes.
                             </p>
                         </div>
                     </div>
@@ -77,11 +77,11 @@ export function Practices() {
                         />
                         <div className="flex flex-col items-start gap-3">
                             <h3 className="text-[1.1875rem] font-bold leading-none text-purple-950 md:text-[1.3125rem]">
-                                Registrar comunicações
+                                Registre conversas
                             </h3>
                             <p className="text-gray-500">
-                                Anote datas, horários, e o conteúdo de conversas
-                                com a companhia, incluindo nomes de atendentes.
+                                Anote datas, horários e o que foi discutido com
+                                a cia aérea, incluindo o nome dos atendentes.
                             </p>
                         </div>
                     </div>

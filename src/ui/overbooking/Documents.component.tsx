@@ -11,14 +11,18 @@ export function Documents() {
             <Container>
                 <div className="grid items-start gap-8 md:grid-cols-12 md:gap-4">
                     <div className="flex flex-col items-start gap-5 md:col-span-6 md:col-start-1">
-                        <Label>Verifique seu direito à compensação ✅</Label>
+                        <Label>O que a Resolvoo pode fazer por você?</Label>
                         <div className="flex flex-col gap-8">
                             <div className="flex flex-col gap-3 md:max-w-[96%]">
                                 <h2 className="text-[1.5625rem] font-bold leading-none text-purple-950 md:text-[2.5rem]">
-                                    Companhias podem praticar overbooking, mas
-                                    seus direitos estão assegurados!
+                                    Veja se você tem direito a uma indenização
+                                    ✅
                                 </h2>
                                 <p className="text-[1.0625rem] text-gray-600 md:max-w-[78%]">
+                                    As cias aéreas podem praticar overbooking,
+                                    mas você tem direitos garantidos.
+                                    <br />
+                                    <br />
                                     As Resoluções 141/2010 e 400/2016 da Agência
                                     Nacional de Aviação Civil (ANAC),
                                     <span className="text-purple-700">
@@ -28,7 +32,10 @@ export function Documents() {
                                     </span>
                                     <br />
                                     <br />
-                                    Saiba como provar que você foi prejudicado
+                                    <strong>
+                                        Saiba como provar que você foi
+                                        prejudicado
+                                    </strong>
                                 </p>
                             </div>
 
@@ -53,10 +60,11 @@ export function Documents() {
                                         </h3>
                                         <p className="text-[.9375rem] text-gray-500">
                                             É com ele que você faz o check-in e
-                                            é através dele que você vai poder
-                                            comprovar que{' '}
+                                            também é sua prova de que
                                             <span className="text-purple-700">
-                                                não esteve no voo contratado.
+                                                {' '}
+                                                você não conseguiu embarcar no
+                                                voo que comprou.
                                             </span>
                                         </p>
                                     </div>
@@ -80,10 +88,11 @@ export function Documents() {
                                         </h3>
                                         <p className="text-[.9375rem] text-gray-500">
                                             Guarde as notas fiscais do voo com
-                                            os registros de horários e{' '}
+                                            as datas e horários, e{' '}
                                             <span className="text-purple-700">
-                                                procure buscar mais registros de
-                                                que você esteve no aeroporto.
+                                                tente buscar mais registros que
+                                                comprovem sua presença no
+                                                aeroporto.
                                             </span>
                                         </p>
                                     </div>
@@ -130,12 +139,12 @@ export function Documents() {
                                             Comunique o ocorrido
                                         </h3>
                                         <p className="text-[.9375rem] text-gray-500">
-                                            Faça o registro na Central de
-                                            Atendimento, pois as ligações devem
-                                            ser gravadas.{' '}
                                             <span className="text-purple-700">
-                                                Guarde o número do protocolo.
-                                            </span>
+                                                Registre o problema na Central
+                                                de Atendimento da cia aérea,
+                                            </span>{' '}
+                                            e guarde seu número de protocolo,
+                                            pois as chamadas são gravadas.
                                         </p>
                                     </div>
                                 </div>
@@ -153,9 +162,7 @@ export function Documents() {
                             placeholder="blur"
                             alt="Imagem da hero."
                         />
-                        <Floater>
-                            ✍️ Registre as tentativas de negociação
-                        </Floater>
+                        <Floater>✍️ Registre o máximo de detalhes</Floater>
                     </div>
                 </div>
             </Container>

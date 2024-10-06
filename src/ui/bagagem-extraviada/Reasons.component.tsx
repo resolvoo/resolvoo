@@ -10,16 +10,15 @@ export function Reasons() {
                     <div className="flex flex-col gap-8">
                         <div className="flex flex-col gap-3 md:max-w-[52%]">
                             <h2 className="text-[1.5625rem] font-bold leading-none text-purple-950 md:text-[2.5rem]">
-                                Como reduzir o risco de extravio de bagagem?
+                                Como evitar que sua bagagem seja extraviada?
                             </h2>
                             <p className="text-[1.0625rem] text-gray-600 md:max-w-[78%]">
-                                Se você pretende não passar por essa turbulência
-                                em sua vida, há algumas{' '}
+                                Ninguém quer passar por esse perrengue, então
+                                aqui vão algumas dicas para reduzir o risco de
+                                extravio da sua mala.{' '}
                                 <span className="text-purple-700">
-                                    dicas úteis para lidar com a bagagem
-                                    extraviada.
+                                    Dá uma olhada:
                                 </span>{' '}
-                                Confere aqui:
                             </p>
                         </div>
                     </div>
@@ -44,8 +43,8 @@ export function Reasons() {
                                 Faça o check-in com antecedência.
                             </h3>
                             <p className="text-gray-600">
-                                Evite contratempos fazendo o check-in online
-                                antes de chegar ao aeroporto.
+                                Evite transtornos fazendo o seu check-in online,
+                                antes de sair de casa.
                             </p>
                         </div>
                     </div>
@@ -68,7 +67,8 @@ export function Reasons() {
                                 Evite conexões entre diferentes companhias.
                             </h3>
                             <p className="text-gray-600">
-                                Prefira voos diretos ou com a mesma companhia.
+                                Prefira voos diretos ou que sejam da mesma cia
+                                aérea
                             </p>
                         </div>
                     </div>
@@ -88,11 +88,11 @@ export function Reasons() {
 
                         <div className="flex flex-col gap-2 md:max-w-[85%]">
                             <h3 className="text-[1.1875rem] font-bold leading-none text-purple-950">
-                                De olho na sua bagagem
+                                Fique de olho na sua mala
                             </h3>
                             <p className="text-gray-600">
-                                Remova etiquetas antigas e acompanhe a pesagem e
-                                etiquetagem no balcão
+                                Retire as etiquetas antigas e acompanhe todo o
+                                processo de pesagem e etiquetagem no balcão.
                             </p>
                         </div>
                     </div>
@@ -112,11 +112,12 @@ export function Reasons() {
 
                         <div className="flex flex-col gap-2 md:max-w-[85%]">
                             <h3 className="text-[1.1875rem] font-bold leading-none text-purple-950">
-                                Personalize sua bagagem para fácil identificação
+                                Personalize sua bagagem para facilitar a
+                                identificação
                             </h3>
                             <p className="text-gray-600">
                                 Use fitas coloridas ou etiquetas chamativas para
-                                evitar confusões na esteira
+                                evitar confusões na esteira.
                             </p>
                         </div>
                     </div>
@@ -136,11 +137,11 @@ export function Reasons() {
 
                         <div className="flex flex-col gap-2 md:max-w-[85%]">
                             <h3 className="text-[1.1875rem] font-bold leading-none text-purple-950">
-                                Duplique a etiqueta de sua bagagem
+                                Duplique a etiqueta da sua mala
                             </h3>
                             <p className="text-gray-600">
-                                Adicione uma etiqueta interna como precaução
-                                extra.
+                                Coloque uma etiqueta extra dentro da mala como
+                                precaução.
                             </p>
                         </div>
                     </div>
@@ -160,11 +161,12 @@ export function Reasons() {
 
                         <div className="flex flex-col gap-2 md:max-w-[85%]">
                             <h3 className="text-[1.1875rem] font-bold leading-none text-purple-950">
-                                Direitos em caso de avaria na bagagem
+                                Solicite seus direitos em caso de bagagem
+                                danificada
                             </h3>
                             <p className="text-gray-600">
-                                Saiba como receber reparo ou substituição da
-                                mala e solicite sua indenização online.
+                                Saiba como pedir reparo ou substituição da mala
+                                e solicite sua indenização online com a Resolvoo
                             </p>
                         </div>
                     </div>

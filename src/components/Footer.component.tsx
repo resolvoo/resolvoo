@@ -25,8 +25,7 @@ export function Footer() {
                                 </svg>
                             </figure>
                             <p className="max-w-[80%] text-[.9375rem] font-semibold text-purple-300 md:max-w-none md:text-[.9375rem]">
-                                Somos seu parceiro jurídico para suas viagens
-                                aéreas.
+                                Você tem direito a uma boa viagem.
                             </p>
                         </div>
 

@@ -12,23 +12,23 @@ export function Hero() {
             <Container className="flex flex-col gap-8 md:gap-16">
                 <div className="grid gap-2 md:grid-cols-12 md:gap-4">
                     <div className="flex flex-col items-start gap-5 md:col-span-4 md:col-start-1">
-                        <Label>Saiba como lidar com Voo cancelado ✈️</Label>
+                        <Label>Como resolver cancelamentos ✈️</Label>
                         <h1 className="text-[1.5625rem] font-bold leading-none text-purple-950 md:text-[2.75rem]">
-                            Como comprovar um voo cancelado.
+                            Voo cancelado: Você pode ganhar até R$10.000!
                         </h1>
                     </div>
                     <div className="flex flex-col items-start gap-8 md:col-span-full md:col-start-8">
                         <p className=" text-[1.0625rem] text-gray-600 md:max-w-[78%]">
-                            Quando o inesperado acontece, saiba como proteger
-                            seus direitos como passageiro e garantir o reembolso
-                            que você merece.
+                            Descubra como proteger seus direitos como passageiro
+                            e conseguir a indenização que você merece quando o
+                            perrengue acontece.
                         </p>
                         <Button
                             fill="purple"
                             size="md"
                             href={`${process.env.NEXT_REDIRECT_FORM_URL}`}
                         >
-                            Avaliar meu caso
+                            Solicitar avaliação
                         </Button>
                     </div>
                 </div>

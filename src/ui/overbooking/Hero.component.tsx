@@ -11,18 +11,20 @@ export function Hero() {
         <section className="py-12 pb-0 md:py-20">
             <Container className="flex flex-col gap-8 md:gap-16">
                 <div className="grid gap-2 md:grid-cols-12 md:gap-4">
-                    <div className="flex flex-col items-start gap-5 md:col-span-4 md:col-start-1">
+                    <div className="flex flex-col items-start gap-5 md:col-span-5 md:col-start-1">
                         <Label>Overbooking</Label>
                         <h1 className="text-[1.5625rem] font-bold leading-none text-purple-950 md:text-[2.75rem]">
-                            Saiba como lidar com Overbooking
+                            Como lidar em caso <br />
+                            de Overbooking
                         </h1>
                     </div>
                     <div className="flex flex-col items-start gap-8 md:col-span-full md:col-start-8">
                         <p className=" text-[1.0625rem] text-gray-600 md:max-w-[78%]">
-                            Se você não quer ter as férias destruídas por um
-                            Voo, a ResolVoo{' '}
+                            Ninguém quer ter suas férias prejudicadas por falha
+                            da cia aérea. Conta pra Resolvo que{' '}
                             <span className="text-purple-700">
-                                pode garantir os seus direitos e te reembolsar!
+                                a gente te ajuda a garantir seus direitos e
+                                conseguir a indenização de até R$10.000!
                             </span>
                         </p>
                         <Button
@@ -30,7 +32,7 @@ export function Hero() {
                             size="md"
                             href={`${process.env.NEXT_REDIRECT_FORM_URL}`}
                         >
-                            Avaliar meu caso
+                            Solicitar avaliação
                         </Button>
                     </div>
                 </div>
@@ -45,7 +47,10 @@ export function Hero() {
                         placeholder="blur"
                         alt="Imagem da hero."
                     />
-                    <Floater> 😯 Frustrante e constragedor?</Floater>
+                    <Floater>
+                        😯 Não consegui embarcar por causa do overbooking, e
+                        agora?
+                    </Floater>
                 </div>
             </Container>
         </section>

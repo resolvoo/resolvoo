@@ -6,15 +6,15 @@ export function Reasons() {
         <section className="bg-gray-50 py-20 md:py-28">
             <Container className="flex flex-col gap-10 md:gap-16">
                 <div className="flex flex-col items-start gap-5 md:col-span-6 md:col-start-1">
-                    <Label>Saiba como lidar 💜</Label>
+                    <Label>Saiba como resolver 💜</Label>
                     <div className="flex flex-col gap-8">
                         <div className="flex flex-col gap-3 md:max-w-[64%]">
                             <h2 className="text-[1.5625rem] font-bold leading-none text-purple-950 md:text-[2.5rem]">
-                                Por quais motivos um Voo é cancelado?
+                                Por que um voo pode ser cancelado?
                             </h2>
                             <p className="text-[1.0625rem] text-gray-600 md:max-w-[78%]">
-                                Aqui estão os motivos legais para um possível
-                                cancelamento.
+                                Esses são os principais motivos pelos quais a
+                                cia aérea pode cancelar seu voo:
                             </p>
                         </div>
                     </div>
@@ -62,10 +62,10 @@ export function Reasons() {
                         </svg>
                         <div className="flex flex-col gap-2 md:max-w-[85%]">
                             <h3 className="text-[1.1875rem] font-bold leading-none text-purple-950">
-                                Passageiros desaparecidos
+                                Passageiros ausentes
                             </h3>
                             <p className="text-gray-600">
-                                Não comparecimento de passageiros após check-in.
+                                Passageiros que não comparecem após o check-in.
                             </p>
                         </div>
                     </div>
@@ -126,8 +126,8 @@ export function Reasons() {
                                 Falta de tripulação
                             </h3>
                             <p className="text-gray-600">
-                                Escassez de pessoal qualificado para operar o
-                                voo.
+                                Quantidade insuficiente de funcionários da cia
+                                aérea para que o voo siga de maneira segura.
                             </p>
                         </div>
                     </div>
@@ -150,8 +150,8 @@ export function Reasons() {
                                 Greve da companhia aérea
                             </h3>
                             <p className="text-gray-600">
-                                Paralisação dos funcionários por disputas
-                                trabalhistas.
+                                Paralisação de funcionários da cia aérea por
+                                questões trabalhistas.
                             </p>
                         </div>
                     </div>
@@ -174,7 +174,8 @@ export function Reasons() {
                                 Overbooking
                             </h3>
                             <p className="text-gray-600">
-                                Venda de passagens acima da capacidade do avião.
+                                Venda de passagens acima do número de assentos
+                                disponíveis.
                             </p>
                         </div>
                     </div>

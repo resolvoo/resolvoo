@@ -11,20 +11,21 @@ export function Documents() {
             <Container>
                 <div className="grid items-start gap-8 md:grid-cols-12 md:gap-4">
                     <div className="flex flex-col items-start gap-5 md:col-span-6 md:col-start-1">
-                        <Label>Verifique seu direito à compensação ✅</Label>
+                        <Label>O que a Resolvoo pode fazer por você?</Label>
                         <div className="flex flex-col gap-8">
                             <div className="flex flex-col gap-3 md:max-w-[96%]">
                                 <h2 className="text-[1.5625rem] font-bold leading-none text-purple-950 md:text-[2.5rem]">
-                                    Esteja com todos os documentos para
-                                    comprovar o cancelamento
+                                    Veja se você tem direito a uma indenização
+                                    ✅
                                 </h2>
                                 <p className="text-[1.0625rem] text-gray-600 md:max-w-[78%]">
-                                    Uma reivindicação bem-sucedida começa com a
-                                    documentação correta.
+                                    Tenha todos os documentos em mãos para
+                                    comprovar o cancelamento.Uma restituição
+                                    bem-sucedida começa pela documentação.
                                     <br />
                                     <br />
-                                    Então prepare seus documentos com os
-                                    seguintes itens:
+                                    Esteja preparado, com os seguintes
+                                    comprovantes:
                                 </p>
                             </div>
 
@@ -44,7 +45,7 @@ export function Documents() {
                                         />
                                     </svg>
                                     <p className="font-semibold text-gray-700 md:max-w-[78%] md:text-[1.0625rem]">
-                                        Bilhete de voo original
+                                        Seu bilhete de voo original
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-2 md:gap-3">
@@ -61,7 +62,8 @@ export function Documents() {
                                     </svg>
 
                                     <p className="font-semibold text-gray-700 md:max-w-[78%] md:text-[1.0625rem]">
-                                        Confirmação da reserva de acomodação
+                                        E-mails de confirmação da reserva de
+                                        hospedagem
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-2 md:gap-3">
@@ -78,7 +80,7 @@ export function Documents() {
                                     </svg>
 
                                     <p className="font-semibold text-gray-700 md:max-w-[78%] md:text-[1.0625rem]">
-                                        Confirmação de voo
+                                        E-mails de confirmação do voo
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-2 md:gap-3">
@@ -95,11 +97,11 @@ export function Documents() {
                                     </svg>
 
                                     <p className="font-semibold text-gray-700 md:max-w-[78%] md:text-[1.0625rem]">
-                                        Fotos ou declarações escritas do
+                                        Fotos ou declarações sobre o
                                         cancelamento
                                     </p>
                                 </div>
-                                <div className="flex items-center gap-2 md:gap-3">
+                                <div className="flex items-start gap-2 md:gap-3">
                                     <svg
                                         className="h-9 md:h-6"
                                         viewBox="0 0 24 24"
@@ -113,8 +115,9 @@ export function Documents() {
                                     </svg>
 
                                     <p className="font-semibold text-gray-700 md:max-w-[78%] md:text-[1.0625rem]">
-                                        Número do voo, data e hora programadas e
-                                        motivo do cancelamento
+                                        Número do voo, data e horário
+                                        programados, além do motivo do
+                                        cancelamento
                                     </p>
                                 </div>
                             </div>

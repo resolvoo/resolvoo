@@ -11,20 +11,24 @@ export function Documents() {
             <Container>
                 <div className="grid items-start gap-8 md:grid-cols-12 md:gap-4">
                     <div className="flex flex-col items-start gap-5 md:col-span-6 md:col-start-1">
-                        <Label>Verifique seu direito à compensação ✅</Label>
+                        <Label>
+                            O que fazer se sua bagagem for extraviada?
+                        </Label>
                         <div className="flex flex-col gap-8">
                             <div className="flex flex-col gap-3 md:max-w-[96%]">
                                 <h2 className="text-[1.5625rem] font-bold leading-none text-purple-950 md:text-[2.5rem]">
-                                    Saiba o que fazer após descobrir que bagagem
-                                    foi extraviada
+                                    Veja se você tem direito a uma indenização
+                                    ✅
                                 </h2>
                                 <p className="text-[1.0625rem] text-gray-600 md:max-w-[78%]">
-                                    Antes de sair da sala de embarque, busque um
-                                    funcionário da companhia aérea em{' '}
+                                    Caso esse perrengue aconteça com você, antes
+                                    de sair da área de desembarque, procure um
+                                    funcionário da cia aérea. <br />
+                                    <br />
                                     <span className="text-purple-700">
-                                        caso de problemas com sua bagagem,
+                                        Veja alguns motivos pelos quais sua mala
+                                        pode ficar perdida:
                                     </span>{' '}
-                                    como perdas frequentes.
                                 </p>
                             </div>
 
@@ -46,14 +50,13 @@ export function Documents() {
 
                                     <div className="flex flex-col gap-2">
                                         <h3 className="text-[1.0625rem] font-bold leading-none text-purple-950">
-                                            Mala não identificada
+                                            Mala sem identificação
                                         </h3>
                                         <p className="text-[.9375rem] text-gray-500">
-                                            Isso acontece quando aquela etiqueta
-                                            que é presa em{' '}
+                                            Isso acontece quando a etiqueta
+                                            presa à sua{' '}
                                             <span className="text-purple-700">
-                                                sua bagagem se desprende ou é
-                                                arrancada.
+                                                bagagem se solta ou é arrancada.
                                             </span>
                                         </p>
                                     </div>
@@ -74,11 +77,11 @@ export function Documents() {
 
                                     <div className="flex flex-col gap-2">
                                         <h3 className="text-[1.0625rem] font-bold leading-none text-purple-950">
-                                            Falha da companhia
+                                            Erro da companhia
                                         </h3>
                                         <p className="text-[.9375rem] text-gray-500">
-                                            Quando há problemas com a colocação
-                                            da bagagem na esteira,{' '}
+                                            Quando há falhas na hora de colocar
+                                            a bagagem na esteira{' '}
                                             <span className="text-purple-700">
                                                 durante o check-in.
                                             </span>
@@ -103,11 +106,11 @@ export function Documents() {
                                             Furto
                                         </h3>
                                         <p className="text-[.9375rem] text-gray-500">
-                                            Com câmeras e segurança por todo o
-                                            aeroporto, o risco de furto nas
-                                            esteiras é baixo,{' '}
+                                            Com as câmeras de segurança por todo
+                                            o aeroporto, o risco de furto nas
+                                            esteiras é baixo, mas{' '}
                                             <span className="text-purple-700">
-                                                mas vale ficar de olho!
+                                                sempre vale ficar de olho!
                                             </span>
                                         </p>
                                     </div>

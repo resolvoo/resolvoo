@@ -40,14 +40,12 @@ export function Reasons() {
                                 Assistência Material
                             </h3>
                             <p className="text-gray-600">
-                                Caso o atraso seja superior a 4 horas,
                                 <span className="text-purple-700">
-                                    {' '}
-                                    a companhia aérea deve fornecer
-                                    gratuitamente
-                                </span>
-                                acesso a telefonemas, internet, alimentação,
-                                bebidas e acomodação em caso de pernoite.
+                                    Se o atraso for maior que 4 horas, a cia
+                                    aérea deve fornecer gratuitamente
+                                </span>{' '}
+                                ligações, internet, alimentação, bebidas e
+                                hospedagem, se houver pernoite.
                             </p>
                         </div>
                     </div>
@@ -71,10 +69,12 @@ export function Reasons() {
                                 Reacomodação
                             </h3>
                             <p className="text-gray-600">
-                                Se o atraso for superior a 1 hora, o passageiro
-                                tem direito ao reembolso integral da passagem ou
-                                ser reacomodado em outro voo para o mesmo
-                                destino.
+                                Se o atraso passar de 1 hora, você pode pedir o
+                                reembolso integral da sua passagem{' '}
+                                <span className="text-purple-700">
+                                    ou ser realocado em outro voo para o mesmo
+                                    destino.
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -98,12 +98,10 @@ export function Reasons() {
                                 Indenização por danos materiais
                             </h3>
                             <p className="text-gray-600">
-                                Caso o atraso cause prejuízos financeiros ao
-                                passageiro, como a perda de uma conexão ou de
-                                uma reserva de hotel,{' '}
+                                Se o atraso te causar prejuízos financeiros,
+                                como perder uma conexão ou reserva de hotel,{' '}
                                 <span className="text-purple-700">
-                                    a companhia aérea é responsável pelo
-                                    custeio.
+                                    a cia aérea deve arcar com todos os custos.
                                 </span>
                             </p>
                         </div>

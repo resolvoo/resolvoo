@@ -16,14 +16,12 @@ export function Documents() {
                         <div className="flex flex-col gap-8">
                             <div className="flex flex-col gap-3 md:max-w-[96%]">
                                 <h2 className="text-[1.5625rem] font-bold leading-none text-purple-950 md:text-[2.5rem]">
-                                    Somos especialistas em direitos do
-                                    consumidor!
+                                    Veja se você tem direito a uma indenização
+                                    ✅
                                 </h2>
                                 <p className="text-[1.0625rem] text-gray-600 md:max-w-[78%]">
-                                    E vamos reivindicar uma compensação
-                                    financeira junto a companhias aéreas.
-                                    <br />
-                                    <br /> Basta nos enviar as seguintes
+                                    Se o seu voo atrasou solicite uma avaliação
+                                    pra gente, enviando as seguintes
                                     informações:
                                 </p>
                             </div>
@@ -48,11 +46,11 @@ export function Documents() {
                                             Cartões de embarque
                                         </h3>
                                         <p className="text-[.9375rem] text-gray-500">
-                                            Isso acontece quando aquela etiqueta
-                                            que é presa em{' '}
+                                            No check-in a cia aérea entrega o
+                                            seu cartão de embarque,
                                             <span className="text-purple-700">
-                                                sua bagagem se desprende ou é
-                                                arrancada.
+                                                ele vai ser usado para comprovar
+                                                sua presença no voo.
                                             </span>
                                         </p>
                                     </div>
@@ -76,8 +74,9 @@ export function Documents() {
                                             E-mails de confirmação
                                         </h3>
                                         <p className="text-[.9375rem] text-gray-500">
-                                            E-mail de confirmação de compra da
-                                            passagem
+                                            O seu comprovante da compra da
+                                            passagem e outros e-mails de
+                                            confirmação do voo.
                                         </p>
                                     </div>
                                 </div>
@@ -99,9 +98,9 @@ export function Documents() {
                                             Recibos
                                         </h3>
                                         <p className="text-[.9375rem] text-gray-500">
-                                            Recibos de gastos extras com
-                                            alimentação que você teve por conta
-                                            do atraso
+                                            Seus comprovantes de gastos extras
+                                            com alimentação e hospedagem por
+                                            conta do atraso.
                                         </p>
                                     </div>
                                 </div>
@@ -110,12 +109,9 @@ export function Documents() {
                             <div className="flex flex-col gap-5 rounded-2xl bg-purple-50 p-5 md:max-w-[64%]">
                                 <Image src={purpleHeart} alt="Decorativo" />
                                 <p className="text-[.9375rem] text-purple-950">
-                                    Com estes comprovantes, de forma rápida e
-                                    segura buscaremos uma indenização justa.
-                                    Nossa taxa de serviço é cobrada apenas{' '}
-                                    <span className="text-purple-700">
-                                        após receber sua indenização.
-                                    </span>
+                                    Com esses comprovantes, a gente vai buscar
+                                    sua indenização justa de forma simples e sem
+                                    burocracia.
                                     <br />
                                     <br />{' '}
                                     <span className="text-purple-700">
@@ -137,7 +133,7 @@ export function Documents() {
                             placeholder="blur"
                             alt="Imagem da hero."
                         />
-                        <Floater>Seja um Resolvido! 💜</Floater>
+                        <Floater>✍️ Registre o máximo de detalhes</Floater>
                     </div>
                 </div>
             </Container>
