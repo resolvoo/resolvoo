@@ -10,7 +10,7 @@ export function Practices() {
     return (
         <section className="py-20 md:py-28">
             <Container className="flex flex-col gap-12 md:items-center md:gap-16">
-                <div className="flex flex-col items-center gap-6 md:text-center">
+                <div className="flex flex-col gap-6 md:items-center md:text-center">
                     <Label>Eficiência 💜</Label>
                     <div className="flex flex-col items-center justify-between gap-3">
                         <h2 className="text-[1.5625rem] font-bold leading-none text-purple-950 md:max-w-[68%] md:text-[2.5rem]">
