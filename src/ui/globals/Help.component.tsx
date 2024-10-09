@@ -48,7 +48,7 @@ export function Help() {
                                 +16 cias
                             </h3>
                             <p className="text-[.9375rem] font-semibold leading-tight text-gray-500 md:text-base">
-                                Trabalhamos com mais de 10 companhias aéreas.
+                                Trabalhamos com mais de 16 companhias aéreas.
                             </p>
                         </div>
                         <div className="flex flex-col gap-1">
