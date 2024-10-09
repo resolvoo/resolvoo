@@ -14,8 +14,7 @@ export function Hero() {
                     <div className="flex flex-col items-start gap-5 md:col-span-5 md:col-start-1">
                         <Label>Voo atrasado</Label>
                         <h1 className="text-[1.5625rem] font-bold leading-none text-purple-950 md:text-[2.75rem]">
-                            Voo atrasado: conheça seus direitos e ganhe até
-                            5.000,00!
+                            Voo atrasado: Você pode ganhar até R$10.000!
                         </h1>
                     </div>
                     <div className="flex flex-col items-start gap-8 md:col-span-full md:col-start-8">

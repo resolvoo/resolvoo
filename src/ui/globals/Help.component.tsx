@@ -25,8 +25,8 @@ export function Help() {
 
                     <div className="grid gap-8 md:grid-cols-4 md:gap-6">
                         <div className="flex flex-col gap-1">
-                            <h3 className="text-[1.3125rem] font-bold leading-none text-purple-700 md:text-[1.8125rem]">
-                                + 2mil
+                            <h3 className="text-[1.3125rem] font-bold leading-none text-purple-700 md:text-[1.5625rem]">
+                                +6 mil passageiros
                             </h3>
                             <p className="text-[.9375rem] font-semibold leading-tight text-gray-500 md:text-base">
                                 Já ajudamos um monte de passageiros a receberem
@@ -34,8 +34,8 @@ export function Help() {
                             </p>
                         </div>
                         <div className="flex flex-col gap-1">
-                            <h3 className="text-[1.3125rem] font-bold leading-none text-purple-700 md:text-[1.8125rem]">
-                                +3 anos
+                            <h3 className="text-[1.3125rem] font-bold leading-none text-purple-700 md:text-[1.5625rem]">
+                                +5 anos
                             </h3>
                             <p className="text-[.9375rem] font-semibold leading-tight text-gray-500 md:text-base">
                                 Nossa equipe tem muita experiência, em muitas
@@ -44,16 +44,16 @@ export function Help() {
                             </p>
                         </div>
                         <div className="flex flex-col gap-1">
-                            <h3 className="text-[1.3125rem] font-bold leading-none text-purple-700 md:text-[1.8125rem]">
-                                +10 cias
+                            <h3 className="text-[1.3125rem] font-bold leading-none text-purple-700 md:text-[1.5625rem]">
+                                +16 cias
                             </h3>
                             <p className="text-[.9375rem] font-semibold leading-tight text-gray-500 md:text-base">
                                 Trabalhamos com mais de 10 companhias aéreas.
                             </p>
                         </div>
                         <div className="flex flex-col gap-1">
-                            <h3 className="text-[1.3125rem] font-bold leading-none text-purple-700 md:text-[1.8125rem]">
-                                +5 atendentes
+                            <h3 className="text-[1.3125rem] font-bold leading-none text-purple-700 md:text-[1.5625rem]">
+                                +15 atendentes
                             </h3>
                             <p className="text-[.9375rem] font-semibold leading-tight text-gray-500 md:text-base">
                                 Atendimento especializado e personalizado para o
