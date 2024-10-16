@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import heroImg from '@/assets/hero-image.webp'
+import heroImg from '@/assets/problemas-com-voo.webp'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container.component'
 import { Label } from '@/components/Label.component'
