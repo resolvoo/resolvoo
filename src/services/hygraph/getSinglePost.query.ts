@@ -19,6 +19,17 @@ export async function getSinglePost({ slug }: { slug: string }) {
                         height
                         width
                     }
+                    postsRelacionados {
+                        url
+                        titulo
+                        descricao
+                        createdAt
+                        capaDoPost {
+                            url
+                            height
+                            width
+                        }
+                    }
                 }
             }
         `,

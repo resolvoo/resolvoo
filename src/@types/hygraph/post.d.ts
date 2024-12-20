@@ -10,6 +10,21 @@ export interface Post {
     descricao: string
     url: string
     createdAt: string
+
+    postsRelacionados: {
+        url: string
+        titulo: string
+        descricao: string
+        createdAt: string
+
+        capaDoPost: {
+            id: string
+            url: string
+            width: number
+            height: number
+        }
+    }[]
+
     content: {
         raw: {
             children: []

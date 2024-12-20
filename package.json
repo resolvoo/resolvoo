@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.9.10",
-    "@graphcms/rich-text-react-renderer": "^0.6.1",
+    "@graphcms/rich-text-react-renderer": "^0.6.2",
     "@gsap/react": "^2.1.0",
     "@hookform/resolvers": "^3.3.4",
     "@next/third-parties": "^14.2.3",

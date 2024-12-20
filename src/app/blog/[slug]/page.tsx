@@ -4,7 +4,7 @@ import { ptBR } from 'date-fns/locale'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { redirect } from 'next/navigation'
+import { notFound } from 'next/navigation'
 import Script from 'next/script'
 import { Article, WithContext } from 'schema-dts'
 
@@ -13,6 +13,7 @@ import resolvooImage from '@/assets/resolvoo-icon.png'
 import { Container } from '@/components/Container.component'
 import { Footer } from '@/components/Footer.component'
 import { Header } from '@/components/Header.component'
+import { Label } from '@/components/Label.component'
 import { getSinglePost } from '@/services/hygraph/getSinglePost.query'
 import { Indexes } from '@/ui/blog/components/Indexes.component'
 import { Cta } from '@/ui/home/Cta.component'
@@ -50,7 +51,7 @@ export default async function Page({ params }: Props) {
     const { post }: Data = data
 
     if (!post) {
-        return redirect('/404')
+        return notFound()
     }
 
     return (
@@ -104,7 +105,17 @@ export default async function Page({ params }: Props) {
                             <RichText
                                 content={post?.content?.raw}
                                 renderers={{
-                                    img: ({ src, width, altText, height }) => {
+                                    iframe: ({ height, url, width }) => {
+                                        return (
+                                            <iframe
+                                                className="mb-5"
+                                                src={url}
+                                                width={width}
+                                                height={height}
+                                            />
+                                        )
+                                    },
+                                    img: ({ src, width, height }) => {
                                         return (
                                             <Image
                                                 src={src!}
@@ -181,6 +192,72 @@ export default async function Page({ params }: Props) {
                     </div>
                 </Container>
             </main>
+
+            {post.postsRelacionados.length !== 0 && (
+                <section className="py-20 md:py-28">
+                    <Container className="grid gap-16">
+                        <div className="border-b border-gray-200 pb-6 md:pb-8">
+                            <div className="flex flex-col items-start gap-6">
+                                <Label>Acompanhe nossos conteúdos</Label>
+                                <div className="flex flex-col justify-between gap-3 md:flex-row">
+                                    <h2 className="text-[2rem] font-bold leading-none text-purple-950 md:max-w-[40%] md:text-[2.5rem]">
+                                        Fique ligado em dicas de viagem no{' '}
+                                        <span className="text-purple-700">
+                                            nosso blog!
+                                        </span>
+                                    </h2>
+                                    <p className="text-[1.0625rem] font-medium text-gray-500 md:max-w-[40%]">
+                                        Tudo o que você precisa saber sobre seus
+                                        direitos de passageiro aéreo, como
+                                        evitar perrengues, notícias e até dicas
+                                        de destinos!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="grid gap-4 gap-y-12 md:grid-cols-3">
+                            {post.postsRelacionados.map((el, i) => (
+                                <Link
+                                    href={`blog/${el?.url}`}
+                                    key={i}
+                                    className="group flex flex-col items-start gap-6"
+                                >
+                                    <Image
+                                        className="h-[16rem] rounded-xl object-cover"
+                                        src={el?.capaDoPost?.url}
+                                        width={el?.capaDoPost.width}
+                                        height={el?.capaDoPost.height}
+                                        alt="Imagem de processo."
+                                    />
+
+                                    <div className="flex flex-col items-start gap-3">
+                                        <Label className="transition group-hover:bg-purple-700 group-hover:text-purple-50">
+                                            {format(
+                                                el.createdAt,
+                                                "dd 'de' MMMM 'de' yyyy",
+                                                {
+                                                    locale: ptBR,
+                                                }
+                                            )}
+                                        </Label>
+                                        <h3 className="text-[1.1875rem] font-bold leading-[1.15] text-purple-950 transition group-hover:text-purple-950 md:max-w-[90%] md:text-[1.3125rem]">
+                                            {el?.titulo}
+                                        </h3>
+                                        <span className="text-gray-500">
+                                            {el?.descricao}
+                                        </span>
+                                    </div>
+
+                                    <span className="font-semibold text-purple-700 transition hover:text-purple-950 group-hover:text-purple-950 md:text-[1.0625rem]">
+                                        Ver mais
+                                    </span>
+                                </Link>
+                            ))}
+                        </div>
+                    </Container>
+                </section>
+            )}
 
             <Cta />
             <Faq />
