@@ -1,3 +1,4 @@
+import { gql } from '@apollo/client'
 import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import Image from 'next/image'
@@ -6,10 +7,28 @@ import { DataArray } from '@/@types/hygraph/post'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container.component'
 import { Label } from '@/components/Label.component'
-import { getPosts } from '@/services/hygraph/getPosts.query'
+import { apolloClient } from '@/lib/apollo/apollo.client'
 
 export async function Feature() {
-    const { data } = await getPosts({ size: 1 })
+    const { data, loading, error } = await apolloClient.query({
+        query: gql`
+            query getPost {
+                posts(first: 1, orderBy: createdAt_DESC) {
+                    url
+                    titulo
+                    descricao
+                    createdAt
+
+                    capaDoPost {
+                        url
+                        height
+                        width
+                    }
+                }
+            }
+        `,
+    })
+
     const { posts }: DataArray = data
     return (
         <section className="py-16 pt-4 md:pb-20 md:pt-6">

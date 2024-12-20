@@ -54,7 +54,11 @@ export function Posts() {
     const { data, fetchMore, loading } = useQuery<PostsQueryData>(
         gql`
             query getAllPostsWithPagination($first: Int!, $after: String) {
-                postsConnection(after: $after, first: $first) {
+                postsConnection(
+                    after: $after
+                    first: $first
+                    orderBy: createdAt_DESC
+                ) {
                     edges {
                         cursor
                         node {
