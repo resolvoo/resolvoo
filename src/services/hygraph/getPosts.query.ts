@@ -11,6 +11,7 @@ export async function getPosts({ size }: { size: number }) {
                     titulo
                     descricao
                     createdAt
+
                     capaDoPost {
                         url
                         height
