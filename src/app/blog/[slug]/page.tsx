@@ -98,7 +98,7 @@ export default async function Page({ params }: Props) {
                     </div>
                     <hr className="w-full border-gray-100" />
                     <div className="flex h-full flex-col items-start gap-4 md:grid md:grid-cols-12">
-                        <div className="sticky top-8 flex w-full flex-col gap-2 rounded-2xl bg-purple-50 p-5 md:col-start-1 md:col-end-6">
+                        <div className="flex w-full flex-col gap-2 rounded-2xl bg-purple-50 p-5 md:sticky md:top-8 md:col-start-1 md:col-end-6">
                             <Indexes />
                         </div>
                         <div className="h-full w-full md:col-span-full md:col-start-6">
