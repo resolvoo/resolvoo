@@ -58,7 +58,7 @@ export default async function Page({ params }: Props) {
         <>
             <Header />
 
-            <main className="block overflow-hidden py-4 md:py-20">
+            <main className="block py-4 md:py-20">
                 <Container
                     size="sm"
                     className="flex flex-col gap-8 md:items-center md:gap-16"
