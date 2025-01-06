@@ -105,6 +105,9 @@ export default async function Page({ params }: Props) {
                             <RichText
                                 content={post?.content?.raw}
                                 renderers={{
+                                    class: ({ children, className }) => {
+                                        return <div>{children}</div>
+                                    },
                                     iframe: ({ height, url, width }) => {
                                         return (
                                             <iframe

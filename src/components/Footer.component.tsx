@@ -43,7 +43,7 @@ export function Footer() {
                                 </Link>
 
                                 <Link
-                                    href={`/voo-atrasado-quais-os-meus-direitos`}
+                                    href={`/voo-atrasado-conheca-seus-direitos-e-saiba-como-reivindica-los`}
                                     className="text-[.9375rem] font-medium  text-purple-200 transition hover:text-purple-50"
                                 >
                                     Voo atrasado
