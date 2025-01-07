@@ -106,7 +106,38 @@ export default async function Page({ params }: Props) {
                                 content={post?.content?.raw}
                                 renderers={{
                                     class: ({ children, className }) => {
-                                        return <div>{children}</div>
+                                        if (className === 'callout') {
+                                            return (
+                                                <div className="flex flex-col gap-4 rounded-md bg-purple-50 p-4">
+                                                    <svg
+                                                        className="h-5 w-5 text-purple-600"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        strokeWidth="2"
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                    >
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            r="10"
+                                                        />
+                                                        <path d="M12 16v-4" />
+                                                        <path d="M12 8h.01" />
+                                                    </svg>
+
+                                                    <div>{children}</div>
+                                                </div>
+                                            )
+                                        }
+
+                                        return (
+                                            <div className={className}>
+                                                {children}
+                                            </div>
+                                        )
                                     },
                                     iframe: ({ height, url, width }) => {
                                         return (
