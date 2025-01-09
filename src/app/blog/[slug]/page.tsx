@@ -108,7 +108,7 @@ export default async function Page({ params }: Props) {
                                     class: ({ children, className }) => {
                                         if (className === 'callout') {
                                             return (
-                                                <div className="flex flex-col gap-4 rounded-md bg-purple-50 p-4">
+                                                <div className="mb-5 flex flex-col gap-4 rounded-md bg-purple-50 p-4">
                                                     <svg
                                                         className="h-5 w-5 text-purple-600"
                                                         xmlns="http://www.w3.org/2000/svg"
