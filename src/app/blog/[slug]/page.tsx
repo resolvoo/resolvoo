@@ -251,17 +251,17 @@ export default async function Page({ params }: Props) {
                         </div>
 
                         <div className="grid gap-4 gap-y-12 md:grid-cols-3">
-                            {post.postsRelacionados.map((el, i) => (
+                            {post?.postsRelacionados.map((el, i) => (
                                 <Link
-                                    href={`blog/${el?.url}`}
+                                    href={`${el.url}`}
                                     key={i}
                                     className="group flex flex-col items-start gap-6"
                                 >
                                     <Image
                                         className="h-[16rem] rounded-xl object-cover"
-                                        src={el?.capaDoPost?.url}
-                                        width={el?.capaDoPost.width}
-                                        height={el?.capaDoPost.height}
+                                        src={el.capaDoPost?.url}
+                                        width={el.capaDoPost.width}
+                                        height={el.capaDoPost.height}
                                         alt="Imagem de processo."
                                     />
 
@@ -276,10 +276,10 @@ export default async function Page({ params }: Props) {
                                             )}
                                         </Label>
                                         <h3 className="text-[1.1875rem] font-bold leading-[1.15] text-purple-950 transition group-hover:text-purple-950 md:max-w-[90%] md:text-[1.3125rem]">
-                                            {el?.titulo}
+                                            {el.titulo}
                                         </h3>
                                         <span className="text-gray-500">
-                                            {el?.descricao}
+                                            {el.descricao}
                                         </span>
                                     </div>
 
