@@ -134,10 +134,7 @@ export default function RootLayout({
                                 />
                             </svg>
                         </Link>
-                        <Button
-                            href={`${process.env.NEXT_REDIRECT_FORM_URL}`}
-                            size="xs"
-                        >
+                        <Button href={`https://app.resolvoo.com.br/`} size="xs">
                             Avaliar meu caso
                         </Button>
                     </div>
