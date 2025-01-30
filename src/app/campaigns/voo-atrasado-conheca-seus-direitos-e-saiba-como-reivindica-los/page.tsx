@@ -50,6 +50,10 @@ export const metadata: Metadata = {
     verification: {
         google: 'KAWXAPOQUnhJxiODVvMzozNw5lbW2B7cDrwOdfb1p8',
     },
+
+    robots: {
+        index: false,
+    },
 }
 export default function Page() {
     return (
