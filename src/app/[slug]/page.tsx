@@ -116,6 +116,16 @@ export default async function Page({ params }: Props) {
                                             />
                                         )
                                     },
+                                    iframe: ({ height, url, width }) => {
+                                        return (
+                                            <iframe
+                                                className="mb-5 w-full"
+                                                src={url}
+                                                width={width}
+                                                height={height}
+                                            />
+                                        )
+                                    },
                                     a: ({ children, href }) => {
                                         return (
                                             <Link
