@@ -13,6 +13,22 @@ const nextConfig = {
     async redirects() {
         return [
             {
+                source: '/voo-atrasado-conheca-seus-direitos-e-saiba-como-reivindica-los',
+                destination:
+                    '/blog/voo-atrasado-conheca-seus-direitos-e-saiba-como-reivindica-los',
+                permanent: true,
+            },
+            {
+                source: '/overbooking',
+                destination: '/blog/overbooking',
+                permanent: true,
+            },
+            {
+                source: '/o-que-fazer-em-caso-de-bagagem-extraviada',
+                destination: '/blog/o-que-fazer-em-caso-de-bagagem-extraviada',
+                permanent: true,
+            },
+            {
                 source: '/american-airlines-indenizacao-reembolso-e-seus-direitos',
                 destination:
                     '/blog/american-airlines-indenizacao-reembolso-e-seus-direitos',
