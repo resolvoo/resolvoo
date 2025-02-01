@@ -58,7 +58,12 @@ export const metadata: Metadata = {
     description:
         'Com a Resolvoo, você que teve problemas como voo cancelado e bagagem extraviada, conseguirá sua indenização de forma simples e 100% online. Somos uma consultoria especializada em direito do consumidor para viagens aéreas. Defendemos os direitos dos passageiros, oferecendo orientação legal em casos de atrasos, cancelamentos, extravios de bagagem e outros problemas. Obtenha indenizações por danos morais, reembolso de passagens e resolução de litígios aéreos. Conte com nossa experiência para garantir que seus direitos como passageiro sejam protegidos.',
     applicationName: 'Resolvoo',
-
+    authors: {
+        name: 'Resolvoo',
+        url: 'https://www.instagram.com/resolvoobr/',
+    },
+    publisher: 'Resolvoo',
+    robots: { index: true },
     keywords: [
         'consultoria jurídica',
         'direito do consumidor',

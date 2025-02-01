@@ -12,6 +12,10 @@ export async function generateMetadata(): Promise<Metadata> {
     const protocol = headersList.get('x-forwarded-proto') || 'https'
 
     return {
+        robots: {
+            index: false,
+        },
+
         alternates: {
             canonical: `${protocol}://${host}/campaigns`,
         },
