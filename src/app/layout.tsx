@@ -56,7 +56,7 @@ const jsonLd: WithContext<FAQPage> = {
 export const metadata: Metadata = {
     title: 'Resolvoo | Problemas com Voo? Seja indenizado!',
     description:
-        'Com a Resolvoo, você que teve problemas como voo cancelado e bagagem extraviada, conseguirá sua indenização de forma simples e 100% online. Somos uma consultoria especializada em direito do consumidor para viagens aéreas. Defendemos os direitos dos passageiros, oferecendo orientação legal em casos de atrasos, cancelamentos, extravios de bagagem e outros problemas. Obtenha indenizações por danos morais, reembolso de passagens e resolução de litígios aéreos. Conte com nossa experiência para garantir que seus direitos como passageiro sejam protegidos.',
+        'A Resolvoo é especialista em direito do consumidor para viagens aéreas, ajudando passageiros a obter indenização por voo cancelado, bagagem extraviada e outros problemas. Oferecemos suporte 100% online para garantir reembolso de passagens, compensação por danos morais e resolução de litígios aéreos de forma rápida e segura.',
     applicationName: 'Resolvoo',
     authors: {
         name: 'Resolvoo',
