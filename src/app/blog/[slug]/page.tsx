@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         },
 
         alternates: {
-            canonical: `${protocol}${host}/blog/${params.slug}`,
+            canonical: `${protocol}://${host}/blog/${params.slug}`,
         },
     }
 }
