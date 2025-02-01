@@ -2,6 +2,7 @@ import { RichText } from '@graphcms/rich-text-react-renderer'
 import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import { Metadata } from 'next'
+import { headers } from 'next/headers'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -29,6 +30,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { data } = await getSinglePost({ slug: params.slug })
     const { post }: Data = data
 
+    const headersList = headers()
+    const host = headersList.get('host')
+
     return {
         title: post?.titulo,
         description: post?.descricao,
@@ -42,6 +46,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             description: post?.descricao,
 
             images: [`${post?.capaDoPost?.url}`],
+        },
+
+        alternates: {
+            canonical: `${host}/blog/${params.slug}`,
         },
     }
 }
