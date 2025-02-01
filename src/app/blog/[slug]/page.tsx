@@ -32,6 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     const headersList = headers()
     const host = headersList.get('host')
+    const protocol = headersList.get('x-forwarded-proto') || 'https'
 
     return {
         title: post?.titulo,
@@ -49,7 +50,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         },
 
         alternates: {
-            canonical: `${host}/blog/${params.slug}`,
+            canonical: `${protocol}${host}/blog/${params.slug}`,
         },
     }
 }

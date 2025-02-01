@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+import { headers } from 'next/headers'
 
 import { Footer } from '@/components/Footer.component'
 import { Header } from '@/components/Header.component'
@@ -11,49 +11,36 @@ import { Documents } from '@/ui/overbooking/Documents.component'
 import { Hero } from '@/ui/overbooking/Hero.component'
 import { Reasons } from '@/ui/overbooking/Reasons.component'
 
-export const metadata: Metadata = {
-    title: 'Overbooking',
-    description:
-        'Saiba o que é Overbooking, seus direitos em caso de preterição, como evitar transtornos e como pleitear indenizações. Contate a Resolvoo para orientações jurídicas e assistência em casos de overbooking.',
+type Props = {
+    params: { slug: string }
+}
 
-    keywords: [
-        'consultoria jurídica',
-        'direito do consumidor',
-        'viagens aéreas',
-        'indenização por voo atrasado',
-        'cancelamento de voo',
-        'extravio de bagagem',
-        'reembolso de passagens aéreas',
-        'direitos do passageiro',
-        'compensação por overbooking',
-        'advogado de direito do consumidor',
-        'empresa aérea',
-        'reclamação de voo',
-        'legislação aérea',
-        'danos morais',
-        'responsabilidade civil',
-        'passageiro aéreo',
-        'orientação legal',
-        'assistência jurídica',
-        'litígio aéreo',
-        'resolução de conflitos.',
-    ],
+export async function generateMetadata() {
+    const headersList = headers()
+    const host = headersList.get('host')
+    const protocol = headersList.get('x-forwarded-proto') || 'https'
 
-    openGraph: {
+    return {
         title: 'Overbooking',
         description:
             'Saiba o que é Overbooking, seus direitos em caso de preterição, como evitar transtornos e como pleitear indenizações. Contate a Resolvoo para orientações jurídicas e assistência em casos de overbooking.',
-        images: '../../public/resolvoo-opengraph.svg',
-        type: 'website',
-    },
 
-    verification: {
-        google: 'KAWXAPOQUnhJxiODVvMzozNw5lbW2B7cDrwOdfb1p8',
-    },
+        openGraph: {
+            title: 'Overbooking',
+            description:
+                'Saiba o que é Overbooking, seus direitos em caso de preterição, como evitar transtornos e como pleitear indenizações. Contate a Resolvoo para orientações jurídicas e assistência em casos de overbooking.',
+            images: '../../public/resolvoo-opengraph.svg',
+            type: 'website',
+        },
 
-    robots: {
-        index: false,
-    },
+        robots: {
+            index: false,
+        },
+
+        alternates: {
+            canonical: `${protocol}://${host}/campaigns/overbooking`,
+        },
+    }
 }
 
 export default function Page() {

@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { headers } from 'next/headers'
 
 import { Footer } from '@/components/Footer.component'
 import { Header } from '@/components/Header.component'
@@ -11,49 +12,36 @@ import { Documents } from '@/ui/voo-cancelado/Documents.component'
 import { Hero } from '@/ui/voo-cancelado/Hero.component'
 import { Reasons } from '@/ui/voo-cancelado/Reasons.component'
 
-export const metadata: Metadata = {
-    title: 'Voo cancelado: o que fazer e quais os seus direitos?',
-    description:
-        'Veja como resolver seu caso de voo cancelado ou voo atrasado de forma rápida e fácil. Você sabia que pode receber indenização por isso? Veja como!',
+type Props = {
+    params: { slug: string }
+}
 
-    keywords: [
-        'consultoria jurídica',
-        'direito do consumidor',
-        'viagens aéreas',
-        'indenização por voo atrasado',
-        'cancelamento de voo',
-        'extravio de bagagem',
-        'reembolso de passagens aéreas',
-        'direitos do passageiro',
-        'compensação por overbooking',
-        'advogado de direito do consumidor',
-        'empresa aérea',
-        'reclamação de voo',
-        'legislação aérea',
-        'danos morais',
-        'responsabilidade civil',
-        'passageiro aéreo',
-        'orientação legal',
-        'assistência jurídica',
-        'litígio aéreo',
-        'resolução de conflitos.',
-    ],
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const headersList = headers()
+    const host = headersList.get('host')
+    const protocol = headersList.get('x-forwarded-proto') || 'https'
 
-    openGraph: {
+    return {
         title: 'Voo cancelado: o que fazer e quais os seus direitos?',
         description:
             'Veja como resolver seu caso de voo cancelado ou voo atrasado de forma rápida e fácil. Você sabia que pode receber indenização por isso? Veja como!',
-        images: '../../public/resolvoo-opengraph.svg',
-        type: 'website',
-    },
 
-    verification: {
-        google: 'KAWXAPOQUnhJxiODVvMzozNw5lbW2B7cDrwOdfb1p8',
-    },
+        openGraph: {
+            title: 'Voo cancelado: o que fazer e quais os seus direitos?',
+            description:
+                'Veja como resolver seu caso de voo cancelado ou voo atrasado de forma rápida e fácil. Você sabia que pode receber indenização por isso? Veja como!',
+            images: '../../public/resolvoo-opengraph.svg',
+            type: 'website',
+        },
 
-    robots: {
-        index: false,
-    },
+        robots: {
+            index: false,
+        },
+
+        alternates: {
+            canonical: `${protocol}://${host}/campaigns/voo-cancelado-o-que-fazer-e-quais-os-seus-direitos`,
+        },
+    }
 }
 
 export default function Page() {

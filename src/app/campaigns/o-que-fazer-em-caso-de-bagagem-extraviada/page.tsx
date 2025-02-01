@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { headers } from 'next/headers'
 
 import { Footer } from '@/components/Footer.component'
 import { Header } from '@/components/Header.component'
@@ -11,49 +12,32 @@ import { Process } from '@/ui/globals/Process.component'
 import { Why } from '@/ui/globals/Why.component'
 import { Faq } from '@/ui/home/Faq/Faq.component'
 
-export const metadata: Metadata = {
-    title: 'Bagagem extraviada? Saiba como resolver!',
-    description:
-        'Teve a bagagem extraviada ou bagagem perdida e quer saber quais são seus direitos? Seja indenizado de forma rápida por mala extraviada em aeroportos!',
+export async function generateMetadata(): Promise<Metadata> {
+    const headersList = headers()
+    const host = headersList.get('host')
+    const protocol = headersList.get('x-forwarded-proto') || 'https'
 
-    keywords: [
-        'consultoria jurídica',
-        'direito do consumidor',
-        'viagens aéreas',
-        'indenização por voo atrasado',
-        'cancelamento de voo',
-        'extravio de bagagem',
-        'reembolso de passagens aéreas',
-        'direitos do passageiro',
-        'compensação por overbooking',
-        'advogado de direito do consumidor',
-        'empresa aérea',
-        'reclamação de voo',
-        'legislação aérea',
-        'danos morais',
-        'responsabilidade civil',
-        'passageiro aéreo',
-        'orientação legal',
-        'assistência jurídica',
-        'litígio aéreo',
-        'resolução de conflitos.',
-    ],
-
-    openGraph: {
+    return {
         title: 'Bagagem extraviada? Saiba como resolver!',
         description:
             'Teve a bagagem extraviada ou bagagem perdida e quer saber quais são seus direitos? Seja indenizado de forma rápida por mala extraviada em aeroportos!',
-        images: '../../public/resolvoo-opengraph.svg',
-        type: 'website',
-    },
 
-    verification: {
-        google: 'KAWXAPOQUnhJxiODVvMzozNw5lbW2B7cDrwOdfb1p8',
-    },
+        openGraph: {
+            title: 'Bagagem extraviada? Saiba como resolver!',
+            description:
+                'Teve a bagagem extraviada ou bagagem perdida e quer saber quais são seus direitos? Seja indenizado de forma rápida por mala extraviada em aeroportos!',
+            images: '../../public/resolvoo-opengraph.svg',
+            type: 'website',
+        },
 
-    robots: {
-        index: false,
-    },
+        robots: {
+            index: false,
+        },
+
+        alternates: {
+            canonical: `${protocol}://${host}/campaigns/o-que-fazer-em-caso-de-bagagem-extraviada`,
+        },
+    }
 }
 
 export default function Page() {

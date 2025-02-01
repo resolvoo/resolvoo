@@ -18,13 +18,14 @@ type Props = {
     params: { slug: string }
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata() {
     const headersList = headers()
     const host = headersList.get('host')
+    const protocol = headersList.get('x-forwarded-proto') || 'https'
 
     return {
         alternates: {
-            canonical: `${host}`,
+            canonical: `${protocol}://${host}`,
         },
     }
 }
