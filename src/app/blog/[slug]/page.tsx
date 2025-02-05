@@ -128,7 +128,7 @@ const renderers: NodeRendererType = {
 
     p: ({ children }) => {
         return (
-            <p className="mb-5 block w-full text-[1.0625rem] leading-[160%] text-gray-600">
+            <p className="mb-6 block w-full text-[1.0625rem] leading-[160%] text-gray-600">
                 {children}
             </p>
         )
