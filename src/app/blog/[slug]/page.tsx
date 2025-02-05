@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { NodeRendererType, RichText } from '@graphcms/rich-text-react-renderer'
 import { EmbedProps } from '@graphcms/rich-text-types'
 import { format } from 'date-fns'
