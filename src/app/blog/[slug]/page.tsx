@@ -1,4 +1,5 @@
-import { RichText } from '@graphcms/rich-text-react-renderer'
+import { NodeRendererType, RichText } from '@graphcms/rich-text-react-renderer'
+import { EmbedProps } from '@graphcms/rich-text-types'
 import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import { Metadata } from 'next'
@@ -19,6 +20,149 @@ import { getSinglePost } from '@/services/hygraph/getSinglePost.query'
 import { Indexes } from '@/ui/blog/components/Indexes.component'
 import { Cta } from '@/ui/home/Cta.component'
 import { Faq } from '@/ui/home/Faq/Faq.component'
+
+type Feedback = {
+    id: string
+    nomeDoCliente: string
+    fotoDePerfil: {
+        id: string
+        url: string
+    }
+}
+
+const renderers: NodeRendererType = {
+    class: ({ children, className }) => {
+        if (className === 'callout') {
+            return (
+                <div className="mb-5 flex flex-col gap-4 rounded-md bg-purple-50 p-4">
+                    <svg
+                        className="h-5 w-5 text-purple-600"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    >
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 16v-4" />
+                        <path d="M12 8h.01" />
+                    </svg>
+
+                    <div>{children}</div>
+                </div>
+            )
+        }
+
+        return <div className={className}>{children}</div>
+    },
+    iframe: ({ height, url, width }) => {
+        return (
+            <iframe
+                className="my-14 w-full rounded-[.875rem] md:h-[32rem]"
+                src={url}
+                width={width}
+                height={height}
+            />
+        )
+    },
+    img: ({ src, width, height }) => {
+        return (
+            <Image
+                src={src!}
+                className="mb-8 block h-auto w-full rounded-2xl"
+                width={width!}
+                height={height!}
+                alt={'Imagem de post.'}
+            />
+        )
+    },
+    a: ({ children, href, className }) => {
+        if (className === 'link-button') {
+            return (
+                <Link
+                    href={href!}
+                    className="font-main inline-block h-[3.25rem] rounded-[.5625rem] bg-purple-600 px-[1.125rem] py-4 align-middle text-[.9375rem] font-semibold text-purple-50 transition duration-150 ease-in hover:bg-purple-800"
+                >
+                    {children}
+                </Link>
+            )
+        }
+
+        return (
+            <Link
+                href={`${href}`}
+                className="w-full text-wrap font-bold text-purple-700 transition hover:text-purple-950"
+            >
+                {children}
+            </Link>
+        )
+    },
+
+    h2: ({ children }) => {
+        return (
+            <h2
+                id={children as string}
+                className="mb-6 mt-14 block w-full text-3xl font-bold leading-[1.2] text-purple-950"
+            >
+                {children}
+            </h2>
+        )
+    },
+
+    h3: ({ children }) => {
+        return (
+            <h3 className="mb-6 mt-14 block w-full font-bold text-purple-950 md:text-[1.6875rem]">
+                {children}
+            </h3>
+        )
+    },
+    h4: ({ children }) => {
+        return (
+            <h4 className="w-full font-bold text-purple-950 md:text-[1.0625rem]">
+                {children}
+            </h4>
+        )
+    },
+
+    p: ({ children }) => {
+        return (
+            <p className="mb-5 block w-full text-[1.0625rem] leading-[160%] text-gray-600">
+                {children}
+            </p>
+        )
+    },
+
+    li: ({ children }) => {
+        return (
+            <li className="font-text mb-4 pl-2 font-medium text-purple-800 marker:text-purple-600">
+                {children}
+            </li>
+        )
+    },
+
+    ul: ({ children }) => {
+        return <ul className="mb-5 list-disc pl-4">{children}</ul>
+    },
+
+    embed: {
+        Feedback: ({
+            fotoDePerfil,
+            id,
+            nomeDoCliente,
+            nodeId,
+            nodeType,
+        }: EmbedProps<Feedback>) => {
+            return (
+                <div>
+                    eu sou um Feedback
+                    <div>nomeDoCliente</div>
+                </div>
+            )
+        },
+    },
+}
 
 type Props = {
     params: { slug: string }
@@ -59,6 +203,10 @@ export default async function Page({ params }: Props) {
     const { data, error } = await getSinglePost({ slug: params.slug })
     const { post }: Data = data
 
+    if (error) {
+        return notFound()
+    }
+
     if (!post) {
         return notFound()
     }
@@ -69,7 +217,7 @@ export default async function Page({ params }: Props) {
 
             <main className="block py-4 md:py-20">
                 <Container
-                    size="sm"
+                    size="md"
                     className="flex flex-col gap-8 md:items-center md:gap-16"
                 >
                     <div className="flex flex-col gap-4 md:max-w-[48%] md:items-center md:gap-6 md:text-center">
@@ -106,130 +254,20 @@ export default async function Page({ params }: Props) {
                         </div>
                     </div>
                     <hr className="w-full border-gray-100" />
-                    <div className="flex h-full flex-col items-start gap-4 md:grid md:grid-cols-12">
-                        <div className="flex w-full flex-col gap-2 rounded-2xl bg-purple-50 p-5 md:sticky md:top-8 md:col-start-1 md:col-end-6">
-                            <Indexes />
+                    <div className="flex h-full flex-col items-start gap-8 md:grid md:grid-cols-12">
+                        <div className="flex w-full flex-col gap-6 md:sticky md:top-8 md:col-start-1 md:col-end-5">
+                            <h5 className="w-full text-[1.0625rem] font-bold leading-normal text-purple-950 md:text-xl">
+                                {post?.titulo}
+                            </h5>
+                            <div className="flex w-full flex-col gap-2 rounded-2xl bg-purple-50 p-5 ">
+                                <Indexes />
+                            </div>
                         </div>
-                        <div className="h-full w-full md:col-span-full md:col-start-6">
+                        <div className="h-full w-full max-w-[44rem] md:col-span-full md:col-start-5">
                             <RichText
                                 content={post?.content?.raw}
-                                renderers={{
-                                    class: ({ children, className }) => {
-                                        if (className === 'callout') {
-                                            return (
-                                                <div className="mb-5 flex flex-col gap-4 rounded-md bg-purple-50 p-4">
-                                                    <svg
-                                                        className="h-5 w-5 text-purple-600"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 24 24"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        strokeWidth="2"
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                    >
-                                                        <circle
-                                                            cx="12"
-                                                            cy="12"
-                                                            r="10"
-                                                        />
-                                                        <path d="M12 16v-4" />
-                                                        <path d="M12 8h.01" />
-                                                    </svg>
-
-                                                    <div>{children}</div>
-                                                </div>
-                                            )
-                                        }
-
-                                        return (
-                                            <div className={className}>
-                                                {children}
-                                            </div>
-                                        )
-                                    },
-                                    iframe: ({ height, url, width }) => {
-                                        return (
-                                            <iframe
-                                                className="mb-5 w-full"
-                                                src={url}
-                                                width={width}
-                                                height={height}
-                                            />
-                                        )
-                                    },
-                                    img: ({ src, width, height }) => {
-                                        return (
-                                            <Image
-                                                src={src!}
-                                                className="mb-8 block h-auto w-full rounded-2xl"
-                                                width={width!}
-                                                height={height!}
-                                                alt={'Imagem de post.'}
-                                            />
-                                        )
-                                    },
-                                    a: ({ children, href }) => {
-                                        return (
-                                            <Link
-                                                href={`${href}`}
-                                                className="w-full text-wrap font-semibold text-purple-700 underline underline-offset-1"
-                                            >
-                                                {children}
-                                            </Link>
-                                        )
-                                    },
-
-                                    h2: ({ children }) => {
-                                        return (
-                                            <h2
-                                                id={children as string}
-                                                className="block w-full pb-6 text-[1.3125rem] font-bold text-purple-950"
-                                            >
-                                                {children}
-                                            </h2>
-                                        )
-                                    },
-
-                                    h3: ({ children }) => {
-                                        return (
-                                            <h3 className="block w-full text-[1.1875rem] font-bold text-purple-950">
-                                                {children}
-                                            </h3>
-                                        )
-                                    },
-                                    h4: ({ children }) => {
-                                        return (
-                                            <h4 className="w-full text-[1.0625rem] font-bold text-purple-950">
-                                                {children}
-                                            </h4>
-                                        )
-                                    },
-
-                                    p: ({ children }) => {
-                                        return (
-                                            <p className="mb-5 block w-full text-[.9375rem] text-gray-600">
-                                                {children}
-                                            </p>
-                                        )
-                                    },
-
-                                    li: ({ children }) => {
-                                        return (
-                                            <li className="mb-1 text-[.9375rem] font-semibold text-purple-700">
-                                                {children}
-                                            </li>
-                                        )
-                                    },
-
-                                    ul: ({ children }) => {
-                                        return (
-                                            <ul className="mb-5 list-disc pl-4">
-                                                {children}
-                                            </ul>
-                                        )
-                                    },
-                                }}
+                                renderers={renderers}
+                                references={post?.content?.references}
                             />
                         </div>
                     </div>

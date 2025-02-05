@@ -2,7 +2,7 @@ import './globals.css'
 
 import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
-import { Epilogue } from 'next/font/google'
+import { Epilogue, Inter } from 'next/font/google'
 import Link from 'next/link'
 import Script from 'next/script'
 import { FAQPage, WithContext } from 'schema-dts'
@@ -12,7 +12,16 @@ import { MenuWrapper } from '@/components/Menu/Menu.wrapper.component'
 import { Metrics } from '@/components/Metrics.component'
 import { Providers } from '@/providers/Providers.component'
 
-const epilogue = Epilogue({ subsets: ['latin'] })
+const epilogue = Epilogue({
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-epilogue',
+})
+export const inter = Inter({
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-inter',
+})
 
 const jsonLd: WithContext<FAQPage> = {
     '@context': 'https://schema.org',
@@ -105,7 +114,7 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html lang="pt-br" className={epilogue.className}>
+        <html lang="pt-br" className={`${epilogue.variable} ${inter.variable}`}>
             <body>
                 <Providers>
                     {children}

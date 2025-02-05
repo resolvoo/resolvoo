@@ -13,6 +13,16 @@ export async function getSinglePost({ slug }: { slug: string }) {
                     createdAt
                     content {
                         raw
+                        references {
+                            ... on Feedback {
+                                id
+                                nomeDoCliente
+                                fotoDePerfil {
+                                    id
+                                    url
+                                }
+                            }
+                        }
                     }
                     capaDoPost {
                         url
@@ -33,12 +43,6 @@ export async function getSinglePost({ slug }: { slug: string }) {
                 }
             }
         `,
-
-        // context: {
-        //     fetchOptions: {
-        //         next: { revalidate: 5 },
-        //     },
-        // },
 
         variables: {
             slug: slug,

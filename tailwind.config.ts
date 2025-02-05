@@ -49,6 +49,12 @@ const config: Config = {
                 '950': '#0d0a0f',
             },
         },
+        extend: {
+            fontFamily: {
+                main: 'var(--font-epilogue)',
+                text: 'var(--font-inter)',
+            },
+        },
     },
     extend: {},
 }

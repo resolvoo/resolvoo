@@ -29,6 +29,8 @@ export interface Post {
         raw: {
             children: []
         }
+
+        references: []
     }
 }
 

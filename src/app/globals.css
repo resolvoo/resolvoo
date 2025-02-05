@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  @apply antialiased h-full scroll-smooth selection:bg-purple-700 selection:text-purple-50
+  @apply antialiased font-main h-full scroll-smooth selection:bg-purple-700 selection:text-purple-50
 }
 
 body {
@@ -11,5 +11,5 @@ body {
 }
 
 p{
-  @apply font-medium leading-snug tracking-[-0.013em]
+  @apply font-text font-medium leading-snug
 }
