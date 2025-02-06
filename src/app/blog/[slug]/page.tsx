@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disabe */
 
 import { NodeRendererType, RichText } from '@graphcms/rich-text-react-renderer'
 import { EmbedProps } from '@graphcms/rich-text-types'
@@ -18,6 +18,7 @@ import { Container } from '@/components/Container.component'
 import { Footer } from '@/components/Footer.component'
 import { Header } from '@/components/Header.component'
 import { Label } from '@/components/Label.component'
+import { Responsive } from '@/components/Responsive.component'
 import { getSinglePost } from '@/services/hygraph/getSinglePost.query'
 import { Indexes } from '@/ui/blog/components/Indexes.component'
 import { Cta } from '@/ui/home/Cta.component'
@@ -282,60 +283,102 @@ export default async function Page({ params }: Props) {
         <>
             <Header />
 
-            <main className="block py-4 md:py-20">
+            <main className="block py-4 pt-12 md:py-20">
                 <Container
                     size="md"
                     className="flex flex-col gap-8 md:items-center md:gap-16"
                 >
-                    <div className="flex flex-col gap-4 md:max-w-[48%] md:items-center md:gap-6 md:text-center">
-                        <div className="flex items-center gap-2">
-                            <a
-                                className="flex items-center gap-2"
-                                target="_blank"
-                                href="https://www.instagram.com/resolvoobr/"
-                            >
-                                <Image
-                                    src={resolvooImage}
-                                    alt="Ícone da Resolvoo"
-                                />
-                                <span className="font-semibold text-gray-600">
-                                    @resolvoobr
-                                </span>
-                            </a>
-                            |
-                            <span className="font-semibold text-gray-600">
-                                📅{' '}
-                                {format(post.createdAt, "MMMM ' ' dd/yyyy", {
-                                    locale: ptBR,
-                                })}
-                            </span>
-                        </div>
-
-                        <div className="flex flex-col gap-2 md:items-center md:gap-3">
-                            <h1 className="text-[1.5625rem] font-bold leading-[1.05] text-purple-950 md:text-[2.75rem]">
-                                {post.titulo}
-                            </h1>
-                            <p className="text-gray-600 md:text-[1.0625rem]">
-                                {post.descricao}
-                            </p>
-                        </div>
-                    </div>
-                    <hr className="w-full border-gray-100" />
                     <div className="flex h-full flex-col items-start gap-8 md:grid md:grid-cols-12">
-                        <div className="flex w-full flex-col gap-6 md:sticky md:top-8 md:col-start-1 md:col-end-5">
-                            <h5 className="w-full text-[1.0625rem] font-bold leading-normal text-purple-950 md:text-xl">
-                                {post?.titulo}
-                            </h5>
-                            <div className="flex w-full flex-col gap-2 rounded-2xl bg-purple-50 p-5 ">
-                                <Indexes />
+                        <Responsive breakpoint="(min-width: 768px)">
+                            <div className="flex w-full flex-col gap-6 md:sticky md:top-8 md:col-start-1 md:col-end-5">
+                                <span className="w-full text-[1.0625rem] font-bold leading-normal text-purple-950 md:text-xl">
+                                    {post?.titulo}
+                                </span>
+                                <div className="flex w-full flex-col gap-2 rounded-2xl bg-purple-50 p-5 ">
+                                    <Indexes />
+                                </div>
                             </div>
-                        </div>
-                        <div className="h-full w-full max-w-[44rem] md:col-span-full md:col-start-5">
-                            <RichText
-                                content={post?.content?.raw}
-                                renderers={renderers}
-                                references={post?.content?.references}
-                            />
+                        </Responsive>
+                        <div className="flex h-full w-full max-w-[44rem] flex-col gap-8 md:col-span-full md:col-start-5">
+                            <div className="flex flex-col gap-4 md:gap-6">
+                                <div className="flex flex-col gap-3 md:items-center md:gap-3">
+                                    <h1 className="text-[1.5625rem] font-bold leading-[1.25] text-purple-950 md:text-[2.125rem]">
+                                        {post?.titulo}
+                                    </h1>
+                                    <p className="text-gray-600 md:text-[1.0625rem]">
+                                        {post?.descricao}
+                                    </p>
+                                </div>
+
+                                <div className="flex items-center gap-4 font-text">
+                                    <a
+                                        className="flex items-center gap-2"
+                                        target="_blank"
+                                        href="https://www.instagram.com/resolvoobr/"
+                                    >
+                                        <Image
+                                            className="h-7 w-7"
+                                            src={resolvooImage}
+                                            alt="Ícone da Resolvoo"
+                                        />
+                                        <span className="text-[.875rem] font-semibold text-gray-600">
+                                            @resolvoobr
+                                        </span>
+                                    </a>
+                                    <span className="text-purple-600">•</span>
+                                    <div className="flex items-center gap-2">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            className="h-5 w-5 text-purple-700"
+                                        >
+                                            <path d="M8 2v4" />
+                                            <path d="M16 2v4" />
+                                            <rect
+                                                width="18"
+                                                height="18"
+                                                x="3"
+                                                y="4"
+                                                rx="2"
+                                            />
+                                            <path d="M3 10h18" />
+                                        </svg>
+                                        <span className="text-[.875rem] font-semibold text-gray-600">
+                                            {format(
+                                                post.createdAt,
+                                                "dd 'de' MMMM 'de' yyyy",
+                                                {
+                                                    locale: ptBR,
+                                                }
+                                            )}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <Responsive breakpoint="(max-width: 767px)">
+                                <div className="flex w-full flex-col gap-6 md:sticky md:top-8 md:col-start-1 md:col-end-5">
+                                    <h5 className="w-full text-[1.0625rem] font-bold leading-normal text-purple-950 md:text-xl"></h5>
+                                    <div className="flex w-full flex-col gap-2 rounded-2xl bg-purple-50 p-5 ">
+                                        <Indexes />
+                                    </div>
+                                </div>
+                            </Responsive>
+                            <hr className="w-full border-gray-100" />
+                            <div>
+                                <RichText
+                                    content={post?.content?.raw}
+                                    renderers={renderers}
+                                    references={post?.content?.references}
+                                />
+                            </div>
                         </div>
                     </div>
                 </Container>
