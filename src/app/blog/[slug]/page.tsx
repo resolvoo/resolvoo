@@ -85,7 +85,7 @@ const renderers: NodeRendererType = {
             return (
                 <Link
                     href={href!}
-                    className="font-main inline-block h-[3.25rem] rounded-[.5625rem] bg-purple-600 px-[1.125rem] py-4 align-middle text-[.9375rem] font-semibold text-purple-50 transition duration-150 ease-in hover:bg-purple-800"
+                    className="inline-block h-[3.25rem] rounded-[.5625rem] bg-purple-600 px-[1.125rem] py-4 align-middle font-main text-[.9375rem] font-semibold text-purple-50 transition duration-150 ease-in hover:bg-purple-800"
                 >
                     {children}
                 </Link>
@@ -138,7 +138,7 @@ const renderers: NodeRendererType = {
 
     li: ({ children }) => {
         return (
-            <li className="font-text mb-4 pl-2 font-medium text-purple-800 marker:text-purple-600">
+            <li className="mb-4 pl-2 font-text font-medium text-purple-800 marker:text-purple-600">
                 {children}
             </li>
         )
@@ -157,9 +157,74 @@ const renderers: NodeRendererType = {
             nodeType,
         }: EmbedProps<Feedback>) => {
             return (
-                <div>
-                    eu sou um Feedback
-                    <div>nomeDoCliente</div>
+                <div className="flex flex-col gap-4 rounded-xl bg-purple-600 p-4 md:gap-8 md:p-5">
+                    <h3 className="text-lg font-bold leading-[1.35] text-purple-50 md:max-w-[52%]">
+                        Reivindique até R$ 10.000 pelo atraso ou cancelamento do
+                        seu voo.
+                    </h3>
+
+                    <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center md:gap-4">
+                        <div className="flex items-start gap-4 md:items-center">
+                            <div className="flex flex-col items-start gap-3 md:flex-row md:items-center">
+                                <div className="rounded-full border border-purple-50 border-opacity-20 p-2">
+                                    <svg
+                                        className="w-4 text-purple-50"
+                                        viewBox="0 0 24 24"
+                                        focusable="false"
+                                    >
+                                        <rect
+                                            opacity="0"
+                                            width="24"
+                                            height="24"
+                                            fill="white"
+                                            fill-opacity="0"
+                                        ></rect>
+                                        <path
+                                            d="M11.188 1.1725L4.188 4.2835C3.465 4.6045 3 5.3205 3 6.1115V10.8115C3 18.6415 9.439 22.2975 12 22.8115C14.561 22.2975 21 18.6415 21 10.8115V6.1115C21 5.3215 20.535 4.6045 19.812 4.2835L12.812 1.1725C12.295 0.9425 11.705 0.9425 11.188 1.1725ZM10.293 15.5185L7.523 12.7485C7.133 12.3585 7.133 11.7245 7.523 11.3345C7.913 10.9445 8.547 10.9445 8.937 11.3345L11 13.3975L16.085 8.3125C16.475 7.9225 17.109 7.9225 17.499 8.3125C17.889 8.7025 17.889 9.3365 17.499 9.7265L11.707 15.5185C11.317 15.9085 10.683 15.9085 10.293 15.5185Z"
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            fill="currentColor"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <p className="text-[.8125rem] font-semibold text-purple-50 opacity-80">
+                                    Se não ganhar, não paga
+                                </p>
+                            </div>
+                            <div className="flex flex-col items-start gap-3 md:flex-row md:items-center">
+                                <div className="rounded-full border border-purple-50 border-opacity-20 p-2">
+                                    <svg
+                                        className="w-4 text-purple-50"
+                                        viewBox="0 0 24 24"
+                                        focusable="false"
+                                    >
+                                        <rect
+                                            opacity="0"
+                                            width="24"
+                                            height="24"
+                                            fill="white"
+                                            fill-opacity="0"
+                                        ></rect>
+                                        <path
+                                            d="M12 2C10.8954 2 10 2.89543 10 4V9.37891L2.49023 14.0684C2.18523 14.2594 2 14.5931 2 14.9531C2 15.6581 2.68247 16.1612 3.35547 15.9512L10 13.8809V19.2402L8.33789 20.4824C8.12489 20.6414 8 20.8922 8 21.1582C8 21.7062 8.51587 22.1076 9.04688 21.9746L12 21.2363L14.9531 21.9746C15.4841 22.1076 16 21.7062 16 21.1582C16 20.8922 15.8751 20.6414 15.6621 20.4824L14 19.2402V13.8809L20.6445 15.9512C21.3175 16.1612 22 15.6581 22 14.9531C22 14.5931 21.8148 14.2594 21.5098 14.0684L14 9.37891V4C14 2.89543 13.1046 2 12 2Z"
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            fill="currentColor"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <p className="text-[.8125rem] font-semibold text-purple-50 opacity-80">
+                                    Todas as companhias aéreas
+                                </p>
+                            </div>
+                        </div>
+                        <Link
+                            href={''}
+                            className="inline-block rounded-[.5625rem] bg-purple-50 px-[.8125rem] py-[.9375rem] align-middle font-main text-[.8125rem] font-semibold text-purple-950 transition duration-150 ease-in hover:bg-purple-800 hover:text-purple-50"
+                        >
+                            Verificar indenização
+                        </Link>
+                    </div>
                 </div>
             )
         },
