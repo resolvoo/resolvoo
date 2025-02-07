@@ -9,7 +9,7 @@ export function Problems() {
     return (
         <section className="bg-[rgba(126,52,186,.03)] py-20 md:py-28">
             <Container>
-                <div className="grid w-full gap-12 md:grid-cols-2 md:items-center">
+                <div className="flex w-full flex-col-reverse gap-12 md:grid md:grid-cols-2 md:items-center">
                     <Image
                         src={flightProblems.src}
                         className="rounded-2xl"
