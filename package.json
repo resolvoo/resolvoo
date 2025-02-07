@@ -20,6 +20,7 @@
     "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "^1.0.10",
     "date-fns": "^3.6.0",
+    "lucide-react": "^0.474.0",
     "next": "^14.2.3",
     "phosphor-react": "^1.4.1",
     "react": "^18",
