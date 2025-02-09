@@ -36,28 +36,28 @@ export function Footer() {
 
                             <div className="flex flex-col gap-1">
                                 <Link
-                                    href={`/voo-cancelado-o-que-fazer-e-quais-os-seus-direitos`}
+                                    href={`/blog/voo-cancelado-o-que-fazer-e-quais-os-seus-direitos`}
                                     className="text-[.9375rem] font-medium  text-purple-200 transition hover:text-purple-50"
                                 >
                                     Voo cancelado
                                 </Link>
 
                                 <Link
-                                    href={`/voo-atrasado-conheca-seus-direitos-e-saiba-como-reivindica-los`}
+                                    href={`/blog/voo-atrasado-conheca-seus-direitos-e-saiba-como-reivindica-los`}
                                     className="text-[.9375rem] font-medium  text-purple-200 transition hover:text-purple-50"
                                 >
                                     Voo atrasado
                                 </Link>
 
                                 <Link
-                                    href={`/o-que-fazer-em-caso-de-bagagem-extraviada`}
+                                    href={`/blog/o-que-fazer-em-caso-de-bagagem-extraviada`}
                                     className="text-[.9375rem] font-medium  text-purple-200 transition hover:text-purple-50"
                                 >
                                     Bagagem extraviada
                                 </Link>
 
                                 <Link
-                                    href={`/overbooking`}
+                                    href={`/blog/overbooking`}
                                     className="text-[.9375rem] font-medium  text-purple-200 transition hover:text-purple-50"
                                 >
                                     Overbooking
@@ -79,7 +79,7 @@ export function Footer() {
                                 </Link>
                                 <Link
                                     target="_blank"
-                                    href={`${process.env.NEXT_PRIVATE_POLICY_URL}`}
+                                    href={``}
                                     className="text-[15px] font-medium  text-purple-200 transition hover:text-purple-50"
                                 >
                                     Política de privacidade
@@ -94,14 +94,14 @@ export function Footer() {
                             <div className="flex flex-col gap-1">
                                 <Link
                                     aria-label="anchor"
-                                    href={`${process.env.NEXT_REDIRECT_FORM_URL}`}
+                                    href={`https://app.resolvoo.com.br/solucoes/sobre-o-problema`}
                                     className="text-[.9375rem] font-medium  text-purple-200 transition hover:text-purple-50"
                                 >
                                     Problemas com Voos
                                 </Link>
                                 <Link
                                     aria-label="anchor"
-                                    href={`${process.env.NEXT_REDIRECT_FORM_URL}`}
+                                    href={`https://app.resolvoo.com.br/solucoes/sobre-o-problema`}
                                     className="text-[15px] font-medium  text-purple-200 transition hover:text-purple-50"
                                 >
                                     Problemas com bagagem
